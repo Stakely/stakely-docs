@@ -64,9 +64,10 @@ Alternatively, if you are using Yarn, you can do:
 yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ```
 
-## Tip
+## Tips
 
-Use new unreleased features of Docusaurus with the [`@canary` npm dist tag](/community/canary)
+- [Community docs and plugins](https://docusaurus.community/)
+- Use new unreleased features of Docusaurus with the [`@canary` npm dist tag](/community/canary)
 
 ## Problems?
 
