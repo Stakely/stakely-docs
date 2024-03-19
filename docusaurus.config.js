@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Staking Docs',
-  tagline: 'Stakely developer documentation',
+  tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -57,7 +57,7 @@ const config = {
         title: ' Developer Docs',
         logo: {
           alt: 'Stakely Logo',
-          src: 'img/Stakely-io logo.png',
+          src: 'img/Stakely-io-logo.png',
         },
         items: [
           {
