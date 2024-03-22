@@ -1,0 +1,95 @@
+name: Build, Push and Commit Digest
+
+on:
+  push:
+    branches:
+    - main
+    - develop
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Get latest commit author and message
+      run: |
+        echo "COMMIT_AUTHOR=$(git log -1 --pretty=format:'%an')" >> $GITHUB_ENV
+        echo "COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s')" >> $GITHUB_ENV
+
+    - name: Extract branch name
+      shell: bash
+      run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
+
+    - name: Build and push Docker image
+      run: |
+        docker build -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+        echo '${{ secrets.DOCKERHUB_PASSWORD }}' | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        docker push stakely/stakely-docs:${{ env.BRANCH_NAME }}
+
+    - name: Get image digest
+      id: get_digest
+      run: |
+        digest=$(docker inspect --format='{{index .RepoDigests 0}}' stakely/stakely-docs:${{ env.BRANCH_NAME }})
+        echo "IMAGE_DIGEST=$digest" >> $GITHUB_ENV
+
+    - name: Setup SSH
+      uses: MrSquaare/ssh-setup-action@v2.0.1
+      with:
+        host: github.com
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Clone manifests repository
+      run: git clone git@github.com:Stakely/kubernetes-manifests.git
+
+    - name: Commit and push digest to second repository
+      run: |
+        cd kubernetes-manifests
+        echo "Image Digest: ${{ env.IMAGE_DIGEST }}"
+        # Replaces the image digest with the new one to trigger ArgoCD        
+        if [ "${{ env.BRANCH_NAME }}" = "main" ]
+        then
+          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.production.yaml
+        elif [ "${{ env.BRANCH_NAME }}" = "develop" ]
+        then
+          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.preproduction.yaml
+          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.development.yaml
+        fi
+        git config --global user.email "workflows@stakely.io"
+        git config --global user.name "Stakely Workflow"
+        git add -A
+        git commit -m "Update stakely-docs:${{ env.BRANCH_NAME }} image digest"
+        git push
+
+    - name: Send Discord notification if success
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        username: 'GitHub Actions'
+        avatar-url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+        embed-color: '3066993'
+        embed-description: |
+          Workflow _${{ github.workflow }}_ in repository https://github.com/${{ github.repository }}/tree/${{ env.BRANCH_NAME }} has completed and https://github.com/Stakely/kubernetes-manifests has been updated.
+          ArgoCD will deploy the changes in <3 min.
+          - **Commit**: _${{ env.COMMIT_MESSAGE }}_ by _${{ env.COMMIT_AUTHOR }}_
+          - **Branch**: ${{ github.ref_name }}
+          - **Status**: ${{ job.status }}
+
+    - name: Send Discord notification if error
+      if: failure()
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        username: 'GitHub Actions'
+        avatar-url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+        embed-color: '15158332'
+        embed-description: |
+          Error with the workflow _${{ github.workflow }}_ in https://github.com/${{ github.repository }}/actions.
+          Nothing will be deployed until this is fixed.
+          - **Commit**: _${{ env.COMMIT_MESSAGE }}_ by _${{ env.COMMIT_AUTHOR }}_
+          - **Branch**: ${{ github.ref_name }}
+          - **Status**: ${{ job.status }}
+
+
