@@ -11,6 +11,6 @@ Whether you are a developer seeking to integrate staking capabilities with our r
 ## Contents
 - **Developer products**
   - **Staking API**: Explore the functionalities and integration processes of our Staking API to seamlessly incorporate staking services into your applications.
-  - **Web3 Load Balancer**: Learn how our Web3 Load Balancer can help distribute traffic efficiently across your decentralized applications, ensuring optimal performance and reliability.
+  - **Public Nodes**: Learn how our Public Nodes and our Web3 Load Balancer can help distribute traffic efficiently across your decentralized applications, ensuring optimal performance and reliability.
 - **Blockchain documentation**
   - **Ethereum School**: Dive into our comprehensive Ethereum tutorials and guides, designed for both beginners and advanced users, to master the intricacies of Ethereum blockchain.
