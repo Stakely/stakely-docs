@@ -54,7 +54,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: ' Developer Docs',
+        title: 'Developer & Staking Docs',
         logo: {
           alt: 'Stakely Logo',
           src: 'img/Stakely-io-logo.png',

@@ -4,20 +4,18 @@ sidebar_position: 2
 
 # Supported Networks
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+This page provides a comprehensive list of the blockchain networks currently supported by Stakely's Staking API. Our goal is to facilitate a wide range of staking operations across various blockchain ecosystems. Please note that this list is updated regularly to reflect new additions and updates to our supported networks.
 
-Docusaurus has **much more to offer**!
+## Currently Supported Networks
+| Blockchain      | Crafting API | Crafting API | 
+| --------------- | ------------ | ------------ |
+| Cosmos Hub      |       ✅     |       ❌      |
+| Celestia        |       ✅     |       ❌      |
+| Injective       |       ❌     |       ❌      |
+| Sui             |       ❌     |       ❌      |
+| Ethereum (Stakewise) |    ❌   |       ❌      |
 
 
+## Requesting Support for New Networks
 
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
-
-## What's next?
-
-- Read the [official documentation](https://docusaurus.io/)
-- Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
-- Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
-- Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout)
-- Add a [search bar](https://docusaurus.io/docs/search)
-- Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase)
-- Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)
+We are always looking to broaden our support to meet the diverse needs of our users. If there is a network you wish to see supported by our Staking API that is not listed here, please do not hesitate to contact us.
