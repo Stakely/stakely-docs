@@ -1,6 +1,6 @@
 {
-  "label": "Staking API",
-  "position": 2,
+  "label": "Public Nodes",
+  "position": 3,
   "link": {
     "type": "generated-index"
   }

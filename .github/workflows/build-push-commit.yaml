@@ -51,11 +51,11 @@ jobs:
         # Replaces the image digest with the new one to trigger ArgoCD        
         if [ "${{ env.BRANCH_NAME }}" = "main" ]
         then
-          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.production.yaml
+          yq e '.frontend.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.production.yaml
         elif [ "${{ env.BRANCH_NAME }}" = "develop" ]
         then
-          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.preproduction.yaml
-          yq e '.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.development.yaml
+          yq e '.frontend.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.preproduction.yaml
+          yq e '.frontend.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.development.yaml
         fi
         git config --global user.email "workflows@stakely.io"
         git config --global user.name "Stakely Workflow"
