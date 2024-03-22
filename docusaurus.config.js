@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Staking Docs',
+  title: 'Stakely Docs',
   tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',
 
@@ -54,7 +54,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Developer & Staking Docs',
+        title: '⁣⁣⁣⁣ ⁣ ⁣⁣ Developer & Staking Docs',
         logo: {
           alt: 'Stakely Logo',
           src: 'img/Stakely-io-logo.png',
