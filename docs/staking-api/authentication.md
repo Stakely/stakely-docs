@@ -30,9 +30,6 @@ For examples and pre-created code snippets in various programming languages, whi
 
 ## Security and Verification
 
-Ensuring the security of all transactions and data exchanges remains our top priority. To accomplish this, each response from our API is accompanied by a verification field. This key addition is our method of guaranteeing that the data remains unaltered during transmission, thus preserving the integrity and security of your interactions.
+Ensuring the security of all transactions and data exchanges remains our top priority. To accomplish this, we have implemented a method where the signature of each HTTP response can be found in the header under the name "stakely-verification-signature". This signature is the SHA256 hash of the HTTP response body, signed using the Elliptic Curve Digital Signature Algorithm (ECDSA) with the SECP256k1 curve. To verify the integrity and authenticity of the data received, you must use the corresponding public key, which is readily accessible [here](https://stakely.io).
 
-We achieve this additional layer of security by utilizing the Elliptic Curve Digital Signature Algorithm (ECDSA) to sign the payloads on the backend with a private key. For those interested in verifying this security measure, the corresponding public key is readily accessible [here](https://stakely.io).
-
-While verification on the client side is optional, we encourage implementing this step to further ensure the authenticity and integrity of the data received.
-
+This approach ensures that the data remains unaltered during transmission, thereby preserving the security and integrity of your interactions. While verification of the signature on the client side is optional, we encourage its implementation as an additional measure to further ensure the authenticity and integrity of the data received.
