@@ -8,6 +8,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+    markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   title: 'Stakely Docs',
   tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',

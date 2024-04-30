@@ -7,7 +7,7 @@ sidebar_position: 2
 This page provides a comprehensive list of the blockchain networks currently supported by Stakely's Staking API. Our goal is to facilitate a wide range of staking operations across various blockchain ecosystems. Please note that this list is updated regularly to reflect new additions and updates to our supported networks.
 
 ## Currently Supported Networks
-| Blockchain      | Crafting API | Crafting API | 
+| Blockchain      | Crafting API | Reporting API | 
 | --------------- | ------------ | ------------ |
 | Cosmos Hub      |       ✅     |       ❌      |
 | Celestia        |       ✅     |       ❌      |
