@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import  { ScalarOptions } from '@scalar/docusaurus';
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -54,6 +56,22 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@scalar/docusaurus',
+      {
+        label: 'Staking API reference',
+        route: '/staking-api/api-reference',
+        configuration: {
+          // theme: 'solarized',
+          // layout: 'classic',
+          spec: {
+            url: 'https://dev-staking-api.stakely.io/docs-json',
+          },
+        },
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

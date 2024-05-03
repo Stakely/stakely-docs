@@ -26,8 +26,8 @@ Staking API-->>-User: Returns signed transaction
 activate User
 rect rgba(228, 173, 77, 0.8)
 Note left of User: With the signed transaction you can:
-Note left of User: Broadcaste it by yourself using any RPC
-Note left of User: Send it to the broadcast endpoint 
+Note left of User: Broadcast it by yourself using any RPC
+Note left of User: Send it to the broadcast endpoint
 end
 deactivate User
 User->>+Staking API: Broadcast
@@ -38,7 +38,8 @@ rect rgba(50, 156, 0, 0.8)
 Note left of User:  If success, transaction is already onchain! 🚀
 end
 deactivate User
-``` 
+```
+<!-- 
 ### Stake (delegation)
 
 Staking on Cosmos Hub involves delegating ATOMs, the native cryptocurrency of the Cosmos network, to a validator. Validators participate in consensus and governance. By staking your ATOMs, you help secure the network and earn rewards.
@@ -69,4 +70,4 @@ ___
 
 :::info
 You can have a look to [Protocol-staking-CosmosHub](https://learn.protocolstaking.info/detailed-explainers/staking-mechanism/cosmos-hub) **detailed information** .
-:::
+::: -->
