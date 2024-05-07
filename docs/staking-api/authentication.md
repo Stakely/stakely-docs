@@ -7,25 +7,32 @@ sidebar_position: 3
 Welcome to the Authentication section of the Stakely Staking API documentation. This page outlines the necessary steps and protocols for securely interacting with our API, ensuring that your data remains safe and your transactions are securely processed.
 
 
-## Admin Endpoints
+## Auth Endpoints
 
-The admin endpoints play a crucial role in the management and operation of your API keys. These endpoints allow you to:
+Authentication endpoints are crucial components of any API that require user verification. These endpoints are designed to handle requests related to user authentication and security, ensuring that only authorized users can access specific functionalities of the system. Common tasks managed by authentication endpoints include logging in users, handling session tokens, and managing user authentication states.
 
-- **Register** for access to the Staking API.
-- **Login** to manage your account and access API functionalities.
-- **Manage API Keys**: This includes creating new API keys, listing all your existing keys, and deleting any keys that are no longer needed.
+---
 
+- **Register** [`/api/v1/auth/email/register`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/register) Although you can register using your desired email and password, your account will need to be manually activated by us. Please contact us.
+- **Login** [`/api/v1/auth/email/login`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/login) for access to the Staking API, once logged in you can retrieve JWT token.
+- **Manage API Keys** [`/apikeys`](/staking-api/api-reference#tag/apikeys): This includes creating new API keys, listing all your existing keys, and deleting any keys that are no longer needed.
 
 ## Beta Stage Registration
 
-As Stakely's Staking API is currently in the beta stage, registering to use our service requires manual whitelisting. If you wish to try our product, please reach out to us. 
+As Stakely's Staking API is currently in the beta stage, registering to use our service requires manual whitelisting. If you wish to try our product, please reach out to us.
 
 
 ## Using the API Keys
 
 To interact with the crafting and reporting aspects of our API, you must use the API keys obtained through the admin endpoints. The key must be included as an authorization header in your requests.
 
-Once logged in with JWT, you can create new API keys. The API key value is only returned upon creation. Be sure to copy and save the API key in a secure location. Afterwards, you can still manage, list, edit, and delete existing API keys.
+
+:::info
+Authentication for these endpoints is based on JSON Web Tokens (JWT). Login endpoint returns a valid JWT.
+:::
+
+
+Once logged in with the user JWT JWT, you can create new API keys. The API key value is only returned upon creation. Be sure to copy and save the API key in a secure location. Afterwards, you can still manage, list, edit, and delete existing API keys.
 
 Header user for API key authentication is `X-API-KEY`.
 

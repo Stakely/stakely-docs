@@ -15,8 +15,8 @@ Staking API-->>-User: Stake action return
 activate User
 rect rgb(255,178,216)
 Note left of User: 📝 Sign unsigned transaction:
-Note left of User:  🔑 Locally with private key
-Note left of User:  🏦 By a supported custodian
+Note left of User:  a) Locally with private key 🔑
+Note left of User:  b) Custodian 🏦
 end
 deactivate User
 
@@ -32,7 +32,7 @@ end
 deactivate User
 User->>+Staking API: Broadcast
 Note right of Staking API: 📡  Broadcast to the network
-Staking API-->>-User: Returns signed transaction
+Staking API-->>-User: Returns broadcasted transaction status
 activate User
 rect rgba(50, 156, 0, 0.8)
 Note left of User:  If success, transaction is already onchain! 🚀
