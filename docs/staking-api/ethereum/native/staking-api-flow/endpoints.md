@@ -94,7 +94,7 @@ If you want you are able to filter validators by passing some of the next query 
 | --------------- | ------------ | ------------ |
 | **public_key**   |  `0x801b6d828105ccd8df0f3b3d45d4e799632657c313d15a5a1bac50104e3d4b850187b12e631090ee36809a1f722563e7` | Validator public key hex value |
 | **withdrawal_address**   |  `0x90d2af5efde4c61cefa11d3548d044dcae768fdc` | Withdrawal credential address|
-| **status**   |  One of -> Enum : [`pending`, `deposited`, `active_online`, `active_offline`, `exiting_online`, `exited`] | Beacon chain validator status |
+| **status**   |  One of -> Enum : [`pending`, `deposited`, `active_online`, `active_offline`, `exiting_online`, `exited`, `exiting_offline`, `slashed`, `slashing_online`, `slashing_offline`] | Beacon chain validator status |
 
 
 #### Returned
