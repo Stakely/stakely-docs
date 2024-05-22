@@ -11,9 +11,10 @@ This page provides a comprehensive list of the blockchain networks currently sup
 | --------------- | ------------ | ------------ |
 | Cosmos Hub      |       ✅     |       ❌      |
 | Celestia        |       ✅     |       ❌      |
+| Ethereum (native) |       ✅     |       ❌      |
+| Ethereum (Stakewise) |    ❌ (soon)  |       ❌      |
 | Injective       |       ❌     |       ❌      |
 | Sui             |       ❌     |       ❌      |
-| Ethereum (Stakewise) |    ❌   |       ❌      |
 
 
 ## Requesting Support for New Networks
