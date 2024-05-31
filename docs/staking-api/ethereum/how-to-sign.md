@@ -31,9 +31,7 @@ const { RLP } = require('@ethereumjs/rlp');
 const ethUtil = require('ethereumjs-util');
 const { ethers } = require("ethers");
 const path = require('path');
-const { TxRaw, SignDoc } = require("cosmjs-types/cosmos/tx/v1beta1/tx");
-const { DirectSecp256k1HdWallet, DirectSecp256k1Wallet, makeSignDoc, Registry, decodeTxRaw } = require('@cosmjs/proto-signing')
-const { decodeSignature,pubkeyToAddress, pubkeyToRawAddress } = require("@cosmjs/amino");
+require('dotenv').config({ path: path.join(__dirname, './../.env') })
 
 const accountFrom = {
   address: process.env.ETHEREUM_WALLET_ADDRESS,
@@ -49,14 +47,14 @@ const signUnsignedTxWithPk = async ({serialized_tx_hex, raw_tx_hex_hash}) => {
   const serializedTxBytes = await web3.utils.hexToBytes(serialized_tx_hex);
   const rawTxHexHashWithoutPrefix = raw_tx_hex_hash.substring(2);
 
-  const txObject  = Transaction.TransactionFactory.fromSerializedData(serializedTxHexBack, { common });
+  const txObject  = Transaction.TransactionFactory.fromSerializedData(serializedTxBytes, { common });
 
   const txJson = txObject.toJSON();
 
-  let num = BigInt(json.nonce);
+  let num = BigInt(txJson.nonce);
 
-  const nonceNormalized = num === 0n ? num : json.nonce;
-  const params = [nonceNormalized, json.gasPrice, json.gasLimit, json.to, json.value, json.data];
+  const nonceNormalized = num === 0n ? num : txJson.nonce;
+  const params = [nonceNormalized, txJson.gasPrice, txJson.gasLimit, txJson.to, txJson.value, txJson.data];
 
   const rawTransaction = RLP.encode(params);
 
@@ -64,10 +62,12 @@ const signUnsignedTxWithPk = async ({serialized_tx_hex, raw_tx_hex_hash}) => {
 
   const txHashBytes = Buffer.from(rawTxHexHashWithoutPrefix, 'hex');
 
-  const signResult = ethUtil.ecsign(hashNew_, privateKeyBuffer, accountFrom.chainId);
+  const signResult = ethUtil.ecsign(txHashBytes, privateKeyBuffer, Number(accountFrom.chainId));
 
-  const r = signResult.r;
-  const s = signResult.s;
+  const rBuff = signResult.r;
+  const sBuff = signResult.s;
+  const r = rBuff.toString('hex');
+  const s = sBuff.toString('hex');
   const v = signResult.v;
 
   return { r, s, v};
