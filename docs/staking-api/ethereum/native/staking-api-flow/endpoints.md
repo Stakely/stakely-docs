@@ -40,7 +40,7 @@ ____
 
 New Validator (deposit-data):
 
-- Endpoint: [`/api/v1/eth/native/action/new-validator`](/staking-api/api-reference#tag/eth/post/api/v1/native/action/new-validator)
+- Endpoint: [`/api/v1/eth/native/action/new-validator`](/staking-api/api-reference#tag/eth-native/post/api/v1/eth/native/action/new-validator)
 
 #### Description
 
@@ -60,7 +60,7 @@ ____
 
 Get encrypted exit message for the given validator
 
-- Endpoint: [`/api/v1/native/action/exit-message/{public_key}​`](/staking-api/api-reference#tag/cosmos/post//v1/native/action/exit-message/{public_key})
+- Endpoint: [`/api/v1/eth/native/action/exit-message/{public_key}​`](/staking-api/api-reference#tag/eth-native/get/api/v1/eth/native/action/exit-message/{public_key})
 
 #### Description
 
@@ -72,7 +72,7 @@ At url param you will need to pass the targeted `public_key` to be exited
 
 #### Returned
 
-[`ExitMessageActionResponseDto`](/staking-api/api-reference#model/exitmessageactionresponsedto)
+[`ExitMessageActionResponseDto`](/staking-api/api-reference#tag/eth-native/post/v1/eth/native/validators)
 
 ____
 
@@ -80,7 +80,7 @@ ____
 
 Gets existing validators created by previously `new-validator` endpoint
 
-- Endpoint: [`/api/v1/native/validators​`](/staking-api/api-reference#tag/cosmos/post/v1/native/validators)
+- Endpoint: [`/api/v1/eth/native/validators​`](/staking-api/api-reference#tag/eth-native/get/api/v1/eth/native/validators)
 
 #### Description
 

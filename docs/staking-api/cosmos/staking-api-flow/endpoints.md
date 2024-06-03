@@ -99,26 +99,6 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-[`ClaimRewardsActionDto`](/staking-api/api-reference#model/prepareactiondto)
-
-#### Returned
-
-[`StakingActionResponseDto`](/staking-api/api-reference#model/preparectionresponsedto)
-
-____
-
-### Prepare action
-
-Gathers signature and unsigned tx:
-
-- Endpoint: [`/api/v1/cosmos/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/prepare)
-
-#### Description
-
-Prepare a signed transaction by gathering the provided signatures with the unsigned transaction hex string:
-
-#### Request body parameters
-
 [`PrepareActionDto`](/staking-api/api-reference#model/prepareactiondto)
 
 #### Returned
