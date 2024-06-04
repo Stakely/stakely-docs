@@ -5,11 +5,17 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import  { ScalarOptions } from '@scalar/docusaurus';
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Staking Docs',
-  tagline: 'Dinosaurs are cool',
+    markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  title: 'Stakely Docs',
+  tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -50,25 +56,39 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@scalar/docusaurus',
+      {
+        label: 'Staking API reference',
+        route: '/staking-api/api-reference',
+        configuration: {
+          // theme: 'solarized',
+          // layout: 'classic',
+          spec: {
+            url: 'https://dev-staking-api.stakely.io/docs-json',
+          },
+        },
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: ' Developer Docs',
+        title: '⁣⁣⁣⁣ ⁣ ⁣⁣ Developer & Staking Docs',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/Stakely-io logo.png',
+          alt: 'Stakely Logo',
+          src: 'img/Stakely-io-logo.png',
         },
         items: [
           {
             href: 'https://stakely.io',
-            position: 'left',
+            position: 'right',
             label: 'Main Website',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Stakely/',
             label: 'GitHub',
             position: 'right',
           },
@@ -78,42 +98,20 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/Stakely_io',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/Stakely',
               },
             ],
-          },
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Stakely, SL. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Stakely, SL`,
       },
       prism: {
         theme: prismThemes.github,
