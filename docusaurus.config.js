@@ -142,6 +142,22 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    themes: [
+      [
+        // @ts-ignore
+        require.resolve("@easyops-cn/docusaurus-search-local"),
+        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+        // @ts-ignore
+        ({
+          // `hashed` is recommended as long-term-cache of index file is possible
+          language: ["en"],
+          indexDocs: true,
+          indexBlog: false,
+          docsRouteBasePath: "/",
+        }),
+      ],
+      '@docusaurus/theme-mermaid'
+    ],
 };
 
 export default config;
