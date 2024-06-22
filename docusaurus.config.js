@@ -5,17 +5,10 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import  { ScalarOptions } from '@scalar/docusaurus';
-
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
   title: 'Stakely Docs',
-  tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -47,6 +40,9 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
+          breadcrumbs: true,
+          sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateTime: false
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
@@ -56,32 +52,29 @@ const config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@scalar/docusaurus',
-      {
-        label: 'Staking API reference',
-        route: '/staking-api/api-reference',
-        configuration: {
-          // theme: 'solarized',
-          // layout: 'classic',
-          spec: {
-            url: 'https://dev-staking-api.stakely.io/docs-json',
-          },
-        },
-      },
-    ],
-  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Replace with your project's social card
+      image: 'img/Stakely-io-logo.png', // Create a logo with the text: Stakely.io Docs
       navbar: {
-        title: '⁣⁣⁣⁣ ⁣ ⁣⁣ Developer & Staking Docs',
         logo: {
           alt: 'Stakely Logo',
           src: 'img/Stakely-io-logo.png',
         },
         items: [
+          {
+            to: "staking-api/introduction",
+            label: "Staking API",
+            position: "left",
+            activeBasePath: 'staking-api/',
+          },
+          {
+            to: "public-nodes/introduction",
+            label: "Public Nodes",
+            position: "left",
+            activeBasePath: 'public-nodes/',
+          },
           {
             href: 'https://stakely.io',
             position: 'right',
@@ -98,6 +91,15 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Learn',
+            items: [
+              {
+                label: 'Blog',
+                href: 'https://stakely.io/blog',
+              },
+            ]
+          },
+          {
             title: 'Community',
             items: [
               {
@@ -108,10 +110,32 @@ const config = {
                 label: 'Telegram',
                 href: 'https://t.me/Stakely',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/stakely-io',
+              },
             ],
-          }
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy Policy',
+                href: 'https://stakely.io/privacy-policy',
+              },
+              {
+                label: 'Terms of Service',
+                href: 'https://stakely.io/terms-of-service',
+              },
+            ]
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Stakely, SL`,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       prism: {
         theme: prismThemes.github,
