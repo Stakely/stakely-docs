@@ -8,6 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+    markdown: {
+    mermaid: true,
+  },
   title: 'Stakely Docs',
   favicon: 'img/favicon.ico',
 
@@ -143,6 +146,7 @@ const config = {
       },
     }),
     themes: [
+      '@docusaurus/theme-mermaid',
       [
         // @ts-ignore
         require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -155,8 +159,7 @@ const config = {
           indexBlog: false,
           docsRouteBasePath: "/",
         }),
-      ],
-      '@docusaurus/theme-mermaid'
+      ]
     ],
 };
 
