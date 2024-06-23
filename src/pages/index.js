@@ -29,7 +29,7 @@ function Home() {
             <div className="container">
               <div className="row cards__container">
                 <Card
-                  to="staking-api/introduction"
+                  to="staking-api/what-is-staking"
                   header={{
                     label:"Staking API"
                   }}
@@ -49,7 +49,7 @@ function Home() {
                 />
   
                 <Card
-                  href="https://stakely.io"
+                  to="https://stakely.io"
                   header={{
                     label:"Main Website"
                   }}

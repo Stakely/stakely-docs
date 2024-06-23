@@ -45,7 +45,8 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateTime: false
+          showLastUpdateTime: false,
+          sidebarCollapsible: false, // Still thinkingif this is a good idea
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
