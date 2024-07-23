@@ -25,6 +25,8 @@ Our Staking API Suite is comprised of two primary components, each designed to s
 
 - **Public Documentation and API Specs:** To facilitate easy integration and provide transparency, we offer publicly available documentation and API specifications. These resources are regularly maintained and updated, providing you with the guidance needed to effectively utilize our APIs.
 
+- **Custodial integration:**  
+
 
 ## Getting Started
 
