@@ -4,18 +4,17 @@ sidebar_position: 4
 
 # Authentication
 
-Welcome to the Authentication section of the Stakely Staking API documentation. This page outlines the necessary steps and protocols for securely interacting with our API, ensuring that your data remains safe and your transactions are securely processed.
+This page outlines the necessary steps and protocols for securely interacting with our API, ensuring that your data remains safe and your transactions are securely processed.
 
 
 ## Auth Endpoints
 
-Authentication endpoints are crucial components of any API that require user verification. These endpoints are designed to handle requests related to user authentication and security, ensuring that only authorized users can access specific functionalities of the system. Common tasks managed by authentication endpoints include logging in users, handling session tokens, and managing user authentication states.
+These endpoints are designed to handle requests related to user authentication and security, ensuring that only authorized users can access specific functionalities of the system:
 
----
 
-- **Register** [`/api/v1/auth/email/register`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/register) Although you can register using your desired email and password, your account will need to be manually activated by us. Please contact us.
-- **Login** [`/api/v1/auth/email/login`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/login) for access to the Staking API, once logged in you can retrieve JWT token.
-- **Manage API Keys** [`/apikeys`](/staking-api/api-reference#tag/apikeys): This includes creating new API keys, listing all your existing keys, and deleting any keys that are no longer needed.
+- **Register** [`/api/v1/auth/email/register`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/register) Although you can register using your desired email and password, your account will need to be manually activated. Please contact us before using this endpoint.
+- **Login** [`/api/v1/auth/email/login`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/login) Use this endpoint to login and retrieve the JWT token, used to manage API keys.
+- **Manage API Keys** [`/apikeys`](/staking-api/api-reference#tag/apikeys) This includes creating new API keys, listing all your existing keys, and deleting any keys that are no longer needed.
 
 ## Beta Stage Registration
 
@@ -28,24 +27,24 @@ To interact with the crafting and reporting aspects of our API, you must use the
 
 
 :::info
-Authentication for these endpoints is based on JSON Web Tokens (JWT). Login endpoint returns a valid JWT.
+Authentication for these endpoints is based on JSON Web Tokens (JWT).
 :::
 
 
-Once logged in with the user JWT JWT, you can create new API keys. The API key value is only returned upon creation. Be sure to copy and save the API key in a secure location. Afterwards, you can still manage, list, edit, and delete existing API keys.
+Once logged in with the user, you will receive a JWT that can be used to create new API keys. API keys are only returned upon creation. Be sure to copy and save the API key in a secure location. Afterwards, you can still manage, list, edit, and delete existing API keys with the login endpoint.
 
-Header user for API key authentication is `X-API-KEY`.
+The header used for API key authentication is `X-API-KEY`.
 
 For examples and pre-created code snippets in various programming languages, which will help you integrate our services smoothly, please refer to our API schema available [here](https://stakely.io).
 
 
 ## Security and Verification
 
-Ensuring the security of all transactions and data exchanges remains our top priority. To accomplish this, we have implemented a method where the signature of each HTTP response can be found in the header under the name "stakely-verification-signature". This signature is the SHA256 hash of the HTTP response body, signed using the Elliptic Curve Digital Signature Algorithm (ECDSA) with the SECP256k1 curve. To verify the integrity and authenticity of the data received, you must use the corresponding public key, which is readily accessible on the expandable bellow.
+Ensuring the security of all transactions and data exchanges remains our top priority. To accomplish this, we have implemented a method where the signature of each HTTP response can be found in the header under the name `x-signature`. This signature is the SHA256 hash of the HTTP response body, signed using the Elliptic Curve Digital Signature Algorithm (ECDSA) with the SECP256k1 curve. To verify the integrity and authenticity of the data received, you must use the corresponding public key, which is readily accessible on the expandable bellow.
 <details>
   <summary>**PUBLIC KEY**</summary>
   <div>
-    <div>Copy this value fro signature verification:</div>
+    <div>Copy this value for signature verification:</div>
     <br/>
     ```markup
     -----BEGIN PUBLIC KEY-----
@@ -65,9 +64,9 @@ This approach ensures that the data remains unaltered during transmission, there
 Here is an example code on how you can verify returned signature:
 
 - Node.js Example:
-  - Replace `publicKey` with the provided staking api public key.
-  - Replace `data` with the returned json payload at the request.
-  - Replace `signature` with the returned signature string value located at `X-signature` header
+  - Replace `publicKey` with the provided Staking API public key.
+  - Replace `data` with the returned JSON payload at the request.
+  - Replace `signature` with the returned signature string value located at `x-signature` header
 
 
 ```javascript

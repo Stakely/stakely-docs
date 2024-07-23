@@ -5,7 +5,7 @@ title: What is the Staking API
 
 # What is the Stakely Staking API
 
-Welcome to the **Staking API Suite** by Stakely, a comprehensive B2B solution designed to seamlessly integrate staking functionalities into your applications. Tailored for non-custodial wallets, centralized service providers, and custodians, our API suite offers a robust set of endpoints that empower your platform with staking capabilities, enhancing your service offering and user experience.
+Welcome to the **Staking API Suite** by Stakely, a B2B solution designed to integrate staking functionalities into your applications. Tailored for non-custodial wallets, centralized service providers, and custodians, our API suite offers a set of endpoints that provide your platform with staking capabilities, enhancing your service offering and user experience.
 
 
 ## Core Functionalities
@@ -25,7 +25,7 @@ Our Staking API Suite is comprised of two primary components, each designed to s
 
 - **Public Documentation and API Specs:** To facilitate easy integration and provide transparency, we offer publicly available documentation and API specifications. These resources are regularly maintained and updated, providing you with the guidance needed to effectively utilize our APIs.
 
-- **Custodial integration:**  
+- **Custodial integration:** Our API supports integration with custodians, such as Fireblocks. This allows you to manage assets securely and efficiently through trusted custodial services. We provide documentation and examples to help you seamlessly integrate these custodians with our API.
 
 
 ## Getting Started

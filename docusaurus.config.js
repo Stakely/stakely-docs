@@ -68,7 +68,7 @@ const config = {
         },
         items: [
           {
-            to: "staking-api/introduction",
+            to: "staking-api/what-is-staking",
             label: "Staking API",
             position: "left",
             activeBasePath: 'staking-api/',
