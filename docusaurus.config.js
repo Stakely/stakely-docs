@@ -80,6 +80,12 @@ const config = {
             activeBasePath: 'public-nodes/',
           },
           {
+            to: "obol-portal/introduction",
+            label: "Obol Portal",
+            position: "left",
+            activeBasePath: 'obol-portal/',
+          },
+          {
             href: 'https://stakely.io',
             position: 'right',
             label: 'Main Website',
@@ -97,6 +103,10 @@ const config = {
           {
             title: 'Learn',
             items: [
+              {
+                label: 'Main Website',
+                href: 'https://stakely.io',
+              },
               {
                 label: 'Blog',
                 href: 'https://stakely.io/blog',
@@ -125,11 +135,11 @@ const config = {
             items: [
               {
                 label: 'Privacy Policy',
-                href: 'https://stakely.io/privacy-policy',
+                href: 'https://stakely.io/policies/privacy-policy',
               },
               {
-                label: 'Terms of Service',
-                href: 'https://stakely.io/terms-of-service',
+                label: 'Terms of Use',
+                href: 'https://stakely.io/policies/terms-of-use',
               },
             ]
           },

@@ -47,6 +47,16 @@ function Home() {
                     label:"A list of public and free-to-use endpoints for various blokchains. Use these nodes to interact with the blockchain without running your own node."
                   }}
                 />
+
+                <Card
+                  to="obol-portal/introduction"
+                  header={{
+                    label:"Obol Portal"
+                  }}
+                  body={{
+                    label:"Stake ETH on Obol DVT without the need to manage infrastructure or validator keys. Developed and operated by Stakely, simplifies staking for users by providing an easy-to-use interface while we handle the technical complexities."
+                  }}
+                />
   
                 <Card
                   to="https://stakely.io"
@@ -54,7 +64,7 @@ function Home() {
                     label:"Main Website"
                   }}
                   body={{
-                    label:"Visit our main website to learn more about Stakely and our products and services."
+                    label:"Visit our main website to learn more about Stakely, our products and services, team, tools, and educational content."
                   }}
                 />
 
