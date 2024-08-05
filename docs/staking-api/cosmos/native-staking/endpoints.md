@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 # Endpoints
 
 ## API Usage
-Once you already have access to the staking api with a validated user and existing apikeys you can start using the Staking API.
+Once you already have access to the Staking API with a validated user and existing apikeys you can start using this service.
 
 ### API Reference docs
 

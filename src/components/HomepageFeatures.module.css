@@ -1,16 +1,23 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
 
- .heroBanner {
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
   }
@@ -23,18 +30,7 @@
 }
 
 .cardTitle {
-  color: #FF8257;
-}
-
-.main {
-  margin-bottom: 50px;
-  margin-top: 0px;
-}
-
-.features {
-  display: flex;
-  align-items: top;
-  width: 100%;
+  color: #e84142;
 }
 
 .featureImage {

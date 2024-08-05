@@ -4,7 +4,7 @@
 ## Start with a base image containing NodeJS so we can build Docusaurus.
 FROM node:20-slim as base
 ## Enable corepack.
-RUN corepack enable
+# RUN corepack enable 
 ## Set the working directory to `/opt/docusaurus`.
 WORKDIR /opt/docusaurus
 
