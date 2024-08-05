@@ -21,9 +21,9 @@ The OWR contract is a crucial component in managing consensus rewards and princi
   - Tracks ETH distributions and allocates funds based on predefined thresholds and the configured principal amount.
 - **Creation**: Initiated by the user during the staking process.
 - **Key Parameters**: Rewards address, principal address, and principal amount.
-- **Distribution Logic**: 
+- **Simplified Distribution Logic**: 
   - If balance > 16 ETH: Distributes to principal address.
-  - If balance < 16 ETH: Distributes to rewards and/or principal address.
+  - If balance < 16 ETH: Distributes to rewards address.
 
 **Resources**: 
 - [OWR Contract Repository](https://github.com/ObolNetwork/obol-splits)
@@ -56,7 +56,7 @@ Multicall3 is used to optimize contract interactions and improve user experience
 
 
 ## Contract Flow
-This diagram tries to provide an accurate representation of the reward and principal flows in the Obol Portal system.
+This diagram tries to provide an accurate representation of reward and principal flows in the Obol Portal system.
 ```mermaid
 flowchart TD
     Validators[Ethereum Validators]
@@ -70,7 +70,7 @@ flowchart TD
     Validators -->|Execution Layer Rewards| Split
     
     OWR -->|Principal on Exit| User
-    OWR -->|Consensus Rewards| Split
+    OWR -->|Consensus Layer Rewards| Split
     Split -->|Distributed Rewards| User
     Split -->|Distributed Rewards| Stakely
     Split -->|Distributed Rewards| Obol

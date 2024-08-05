@@ -59,12 +59,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/Stakely-io-logo.png', // Create a logo with the text: Stakely.io Docs
+      image: 'img/Stakely-io-logo.png',
       navbar: {
         logo: {
           alt: 'Stakely Logo',
           src: 'img/Stakely-io-logo.png',
+          srcDark: 'img/Stakely-io-logo-dark.png',
         },
         items: [
           {
