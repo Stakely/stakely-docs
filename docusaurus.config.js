@@ -5,17 +5,13 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import  { ScalarOptions } from '@scalar/docusaurus';
-
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
   title: 'Stakely Docs',
-  tagline: 'Stakely developer Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -47,6 +43,10 @@ const config = {
       ({
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
+          breadcrumbs: true,
+          sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateTime: false,
+          sidebarCollapsible: false, // Still thinkingif this is a good idea
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
@@ -56,32 +56,35 @@ const config = {
     ],
   ],
 
-  plugins: [
-    [
-      '@scalar/docusaurus',
-      {
-        label: 'Staking API reference',
-        route: '/staking-api/api-reference',
-        configuration: {
-          // theme: 'solarized',
-          // layout: 'classic',
-          spec: {
-            url: 'https://dev-staking-api.stakely.io/docs-json',
-          },
-        },
-      },
-    ],
-  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/Stakely-io-logo.png',
       navbar: {
-        title: '⁣⁣⁣⁣ ⁣ ⁣⁣ Developer & Staking Docs',
         logo: {
           alt: 'Stakely Logo',
           src: 'img/Stakely-io-logo.png',
+          srcDark: 'img/Stakely-io-logo-dark.png',
         },
         items: [
+          {
+            to: "staking-api/what-is-staking",
+            label: "Staking API",
+            position: "left",
+            activeBasePath: 'staking-api/',
+          },
+          {
+            to: "public-nodes/introduction",
+            label: "Public Nodes",
+            position: "left",
+            activeBasePath: 'public-nodes/',
+          },
+          {
+            to: "obol-portal/introduction",
+            label: "Obol Portal",
+            position: "left",
+            activeBasePath: 'obol-portal/',
+          },
           {
             href: 'https://stakely.io',
             position: 'right',
@@ -98,6 +101,19 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Learn',
+            items: [
+              {
+                label: 'Main Website',
+                href: 'https://stakely.io',
+              },
+              {
+                label: 'Blog',
+                href: 'https://stakely.io/blog',
+              },
+            ]
+          },
+          {
             title: 'Community',
             items: [
               {
@@ -108,16 +124,54 @@ const config = {
                 label: 'Telegram',
                 href: 'https://t.me/Stakely',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/stakely-io',
+              },
             ],
-          }
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy Policy',
+                href: 'https://stakely.io/policies/privacy-policy',
+              },
+              {
+                label: 'Terms of Use',
+                href: 'https://stakely.io/policies/terms-of-use',
+              },
+            ]
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Stakely, SL`,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+    themes: [
+      '@docusaurus/theme-mermaid',
+      [
+        // @ts-ignore
+        require.resolve("@easyops-cn/docusaurus-search-local"),
+        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+        // @ts-ignore
+        ({
+          // `hashed` is recommended as long-term-cache of index file is possible
+          language: ["en"],
+          indexDocs: true,
+          indexBlog: false,
+          docsRouteBasePath: "/",
+        }),
+      ]
+    ],
 };
 
 export default config;

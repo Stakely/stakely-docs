@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Supported Networks
@@ -12,11 +12,11 @@ This page provides a comprehensive list of the blockchain networks currently sup
 | Cosmos Hub      |       ✅     |       ❌      |
 | Celestia        |       ✅     |       ❌      |
 | Ethereum (native) |       ✅     |       ❌      |
-| Ethereum (Stakewise) |    ❌ (soon)  |       ❌      |
+| Ethereum (Stakewise) |    ✅  |       ❌      |
 | Injective       |       ❌     |       ❌      |
 | Sui             |       ❌     |       ❌      |
 
 
 ## Requesting Support for New Networks
 
-We are always looking to broaden our support to meet the diverse needs of our users. If there is a network you wish to see supported by our Staking API that is not listed here, please do not hesitate to contact us.
+We are always looking to broaden our support to meet the needs of our users. If there is a network you wish to see supported by our Staking API that is not listed here, please do not hesitate to contact us.

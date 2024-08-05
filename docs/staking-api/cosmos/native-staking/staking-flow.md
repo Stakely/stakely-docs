@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
-# Native Staking Flow
+# Staking Flow
 
 ### Stake (delegation)
 
