@@ -21,7 +21,7 @@ The Obol Portal offers a non-custodial service, meaning users always retain cont
 
 3. **Flexible Withdrawals and Rewards**: Users can exit their validators and claim rewards at their discretion.
 
-4. **Comprehensive Dashboard**: Track validators status, balance, rewards, and Obol contribution points through an simple interface.
+4. **Comprehensive Dashboard**: Track validators status, balance, rewards, and Obol contribution points through a simple interface.
 
 5. **Obol Contributions Program**: All users staking ETH through this interface are eligible for the Obol contributions program, earning points for their participation. This program allows you to earn access to future governance and ownership in the Obol Collective.
 
