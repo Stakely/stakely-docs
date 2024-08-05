@@ -61,7 +61,7 @@ const config = {
     [
       '@scalar/docusaurus',
       {
-        label: 'Staking API reference',
+        label: '',
         route: '/staking-api/api-reference',
         configuration: {
           // theme: 'solarized',
@@ -73,7 +73,7 @@ const config = {
       },
     ],
   ],
-  
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
