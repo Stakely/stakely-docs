@@ -3,6 +3,9 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
  .menu__link--active {
   font-weight: 500;
 }
@@ -39,8 +42,8 @@ html[data-theme="dark"] .header--github-link:before {
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-menu-color-active: #FF8257;
-  --ifm-color-primary: #FF8257;
+  --ifm-menu-color-active: #FF7748;
+  --ifm-color-primary: #FF7748;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -50,20 +53,18 @@ html[data-theme="dark"] .header--github-link:before {
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ifm-font-family-monospace: 'Plus Jakarta Sans', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --ifm-font-size-base: 100%;
   --ifm-font-weight-light: 200;
   --ifm-font-weight-normal: 300;
   --ifm-font-weight-semibold: 400;
 }
 
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #FF8257;
+  --ifm-color-primary: #FF7748;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -81,7 +82,7 @@ html[data-theme="dark"] .header--github-link:before {
 }
 
 [data-theme="dark"] .card__header h3 {
-  color:  #CADFFF;
+  color:  #FAF2ED;
 }
 
 .cards__container {
@@ -114,5 +115,5 @@ html[data-theme="dark"] .header--github-link:before {
 }
 
 .card__header h3 {
-  color: #09174A;
+  color: #09184a;
 }
