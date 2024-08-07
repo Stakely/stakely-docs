@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Obol Portal is an innovative interface and backend solution developed by Stakely, enabling users to run Ethereum validators within an Obol Distributed Validator Technology (DVT) cluster. This service combines the reliability and security of Stakely's infrastructure with the robustness of Obol's DVT, offering a unique and efficient staking experience for Ethereum holders.
 
-Stakely, a highly reputable staking infrastructure company, brings its expertise to this project. With over $1B of staked assets, more than 10,000 Ethereum validators, and partnerships with major protocols like Lido, Swell, and Stader, Stakely ensures top-tier service quality. Our SOC2 and ISO 27001 certifications further underline our commitment to security and best practices.
+Stakely, a highly reputable staking infrastructure company, brings its expertise to this project. With over $1B of staked assets, more than 10,000 Ethereum validators, and partnerships with major protocols like Lido, Swell, and Stader, Stakely ensures top-tier service quality. Our SOC 2 and ISO 27001 certifications further underline our commitment to security and best practices.
 
 The Obol Portal offers a non-custodial service, meaning users always retain control of their ETH. This documentation will guide you through the features, setup process, and operation of your validators through the Obol Portal.
 

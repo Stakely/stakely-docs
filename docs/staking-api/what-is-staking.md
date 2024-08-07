@@ -36,10 +36,10 @@ graph LR
     D -->|Distribute| B
     B -->|Earn| A
 
-    style A fill:#85C1E9,stroke:#3498DB,stroke-width:2px
-    style B fill:#82E0AA,stroke:#28B463,stroke-width:2px
-    style C fill:#F7DC6F,stroke:#F1C40F,stroke-width:2px
-    style D fill:#F1948A,stroke:#E74C3C,stroke-width:2px
+    style A fill:#85C1E9,stroke:#3498DB,stroke-width:2px,color:#000000
+    style B fill:#82E0AA,stroke:#28B463,stroke-width:2px,color:#000000
+    style C fill:#F7DC6F,stroke:#F1C40F,stroke-width:2px,color:#000000
+    style D fill:#F1948A,stroke:#E74C3C,stroke-width:2px,color:#000000
 ```
 
 ## More In-Depth Explanation of Staking
