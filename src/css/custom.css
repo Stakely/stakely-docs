@@ -2,7 +2,9 @@
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
+ DOCS:  https://docusaurus.community/knowledge/design/css/variables/
  */
+
 
  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
@@ -59,6 +61,9 @@ html[data-theme="dark"] .header--github-link:before {
   --ifm-font-weight-light: 200;
   --ifm-font-weight-normal: 300;
   --ifm-font-weight-semibold: 400;
+  --ifm-footer-background-color: #09184a;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #FAF2ED;
 }
 
 
@@ -71,6 +76,7 @@ html[data-theme="dark"] .header--github-link:before {
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --ifm-footer-background-color: #303846;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
