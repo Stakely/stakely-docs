@@ -19,6 +19,9 @@ COPY . /opt/docusaurus/
 ARG STAKING_API_URL
 ENV STAKING_API_URL=$STAKING_API_URL
 
+ARG STAKING_API_DOC_JSON_URL
+ENV STAKING_API_DOC_JSON_URL=$STAKING_API_DOC_JSON_URL
+
 RUN npm ci
 ## Build the static site.
 RUN npm run build
@@ -29,4 +32,4 @@ FROM prod as serve
 EXPOSE 3000
 ## Run the production server.
 # CMD ["npm", "run", "serve", "--host 0.0.0.0", "--no-open"]
-CMD ["sh", "-c", "STAKING_API_URL=$STAKING_API_URL npm run serve -- --host 0.0.0.0 --no-open"]
+CMD ["sh", "-c", "STAKING_API_URL=$STAKING_API_URL STAKING_API_DOC_JSON_URL=$STAKING_API_DOC_JSON_URL npm run serve -- --host 0.0.0.0 --no-open"]
