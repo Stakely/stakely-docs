@@ -3,6 +3,7 @@ sidebar_position: 2
 ---
 # Endpoints
 
+import StakingOpenApiLink from '@site/src/components/StakingOpenApiLink';
 
 
 ## API Usage
@@ -21,7 +22,7 @@ In order to use this module endpoints, **you will need to request access to stak
 
 You can check the **Staking API Reference** here:
 - Rendered [doc page](/staking-api/api-reference).
-- [Staking OpenApi](https://dev-staking-api.stakely.io/docs)
+- <StakingOpenApiLink />
 :::
 
 ## Authentication
