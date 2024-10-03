@@ -3,6 +3,7 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
+require('dotenv').config();
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -10,6 +11,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
     markdown: {
     mermaid: true,
+  },
+  customFields: {
+    stakingApiUrl: process.env.STAKING_API_URL,
   },
   title: 'Stakely Docs',
   favicon: 'img/favicon.ico',
@@ -66,7 +70,7 @@ const config = {
           // theme: 'solarized',
           // layout: 'classic',
           spec: {
-            url: 'https://dev-staking-api.stakely.io/docs-json',
+            url: process.env.STAKING_API_DOC_JSON_URL
           },
         },
       },

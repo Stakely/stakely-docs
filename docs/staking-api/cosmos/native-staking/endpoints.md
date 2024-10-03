@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 ---
+
+import StakingOpenApiLink from '@site/src/components/StakingOpenApiLink';
+
 # Endpoints
 
 ## API Usage
@@ -12,7 +15,7 @@ Once you already have access to the Staking API with a validated user and existi
 
 You can check the **Staking API Reference** here:
 - Rendered [doc page](/staking-api/api-reference).
-- [Staking OpenApi](https://dev-staking-api.stakely.io/docs)
+- <StakingOpenApiLink />
 :::
 
 ## Authentication
