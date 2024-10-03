@@ -15,6 +15,10 @@ WORKDIR /opt/docusaurus
 ## Copy over the source code.
 COPY . /opt/docusaurus/
 ## Install dependencies with `--immutable` to ensure reproducibility.
+
+ARG STAKING_API_URL
+ENV STAKING_API_URL=$STAKING_API_URL
+
 RUN npm ci
 ## Build the static site.
 RUN npm run build

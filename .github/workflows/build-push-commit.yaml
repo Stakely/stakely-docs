@@ -25,7 +25,13 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+        if [ "${{ env.BRANCH_NAME }}" = "develop" ]
+        then
+          docker build --build-arg STAKING_API_URL="https://dev-staking-api.stakely.io/docs" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+        elif [ "${{ env.BRANCH_NAME }}" = "main" ]
+        then
+          docker build --build-arg STAKING_API_URL="https://dev-staking-api.stakely.io/docs" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+        fi
         echo '${{ secrets.DOCKERHUB_PASSWORD }}' | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
         docker push stakely/stakely-docs:${{ env.BRANCH_NAME }}
 

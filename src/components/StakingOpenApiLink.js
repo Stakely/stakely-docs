@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const StakingOpenApiLink = () => {
   const { siteConfig } = useDocusaurusContext();
-  const stakingApiUrl = siteConfig.customFields.stakingApiUrl;
+  const stakingApiUrl = siteConfig.stakingApiUrl;
 
   return (
     <a href={stakingApiUrl} target="_blank" rel="noopener noreferrer">
