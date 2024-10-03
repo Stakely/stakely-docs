@@ -2,8 +2,10 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const StakingOpenApiLink = () => {
-  const { siteConfig } = useDocusaurusContext();
-  const stakingApiUrl = siteConfig.stakingApiUrl;
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
+  const stakingApiUrl = customFields.stakingApiUrl;
 
   return (
     <a href={stakingApiUrl} target="_blank" rel="noopener noreferrer">
