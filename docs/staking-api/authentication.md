@@ -35,7 +35,7 @@ Once logged in with the user, you will receive a JWT that can be used to create 
 
 The header used for API key authentication is `X-API-KEY`.
 
-For examples and pre-created code snippets in various programming languages, which will help you integrate our services smoothly, please refer to our API schema available [here](https://stakely.io).
+For examples and pre-created code snippets in various programming languages, which will help you integrate our services smoothly, please refer to our API schema available [here](/staking-api/api-reference).
 
 
 ## Security and Verification
