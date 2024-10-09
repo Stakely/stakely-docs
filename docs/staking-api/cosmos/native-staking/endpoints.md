@@ -118,7 +118,7 @@ Broadcast a signed transaction
 
 #### Description
 
-Broadcast a signed transaction. Usually you will brodcast the signted transaction returned in `prepare` previous step:
+Broadcast a signed transaction. Usually you will brodcast the signed transaction returned in `prepare` previous step:
 
 #### Request body parameters
 
