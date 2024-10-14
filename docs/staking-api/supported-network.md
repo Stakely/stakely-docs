@@ -13,6 +13,7 @@ This page provides a comprehensive list of the blockchain networks currently sup
 | Celestia        |       ✅     |       ❌      |
 | Ethereum (native) |       ✅     |       ❌      |
 | Ethereum (Stakewise) |    ✅  |       ❌      |
+| Solana          |    ✅        |       ❌      |
 | Injective       |       ❌     |       ❌      |
 | Sui             |       ❌     |       ❌      |
 
