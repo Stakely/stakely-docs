@@ -21,10 +21,9 @@ function Home() {
               marginBottom: "0px",
               fontSize: "x-large",
             }}
-            className="main-header"
           >
             <br></br>
-              Welcome to the <span className="main-header--gradient"> Stakely Documentation Hub</span>
+              <span className="main-header">Welcome to the</span> <span className="main-header--gradient"> Stakely Documentation Hub</span>
           </h1>
           <section className={styles.features}>
             <div className="container">

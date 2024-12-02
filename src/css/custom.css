@@ -93,7 +93,7 @@ html[data-theme="dark"] .header--github-link:before {
   --ifm-heading-color: var(--ifm-color-primary);
 
   .main-header {
-    color: var(--stakely-background-00);
+    color: var(--stakely-background-00) !important;
   }
 
   .main-header--gradient {
