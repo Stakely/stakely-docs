@@ -92,10 +92,6 @@ html[data-theme="dark"] .header--github-link:before {
   --ifm-background-color: var(--stakely-background-04) !important;
   --ifm-heading-color: var(--ifm-color-primary);
 
-  .main-header {
-    color: var(--stakely-background-00) !important;
-  }
-
   .main-header--gradient {
     background: linear-gradient(90.01deg,var(--stakely-background-00), var(--stakely-primary-orange) 99.99%);
     -webkit-background-clip: text;
