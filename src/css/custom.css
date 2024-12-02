@@ -99,6 +99,10 @@ html[data-theme="dark"] .header--github-link:before {
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  .main-header--no-gradient {
+    color: var(--stakely-background-00);
+  }
 }
 
 

@@ -23,7 +23,7 @@ function Home() {
             }}
           >
             <br></br>
-              <span style={{color: "#fff"}}>Welcome to the</span> <span className="main-header--gradient"> Stakely Documentation Hub</span>
+              <span className="main-header--no-gradient">Welcome to the</span> <span className="main-header--gradient"> Stakely Documentation Hub</span>
           </h1>
           <section className={styles.features}>
             <div className="container">
