@@ -11,6 +11,8 @@ This page provides a comprehensive list of the blockchain networks currently sup
 | --------------- | ------------ | ------------ |
 | Cosmos Hub      |       ✅     |       ❌      |
 | Celestia        |       ✅     |       ❌      |
+| Omniflix        |       ✅     |       ❌      |
+| Juno        |       ✅     |       ❌      |
 | Ethereum (native) |       ✅     |       ❌      |
 | Ethereum (Stakewise) |    ✅  |       ❌      |
 | Solana          |    ✅        |       ❌      |

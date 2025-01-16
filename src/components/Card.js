@@ -2,9 +2,10 @@ import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import styles from "./HomepageFeatures.module.css";
-import Translate from "@docusaurus/Translate";
+import { useColorMode } from '@docusaurus/theme-common';
 
-function Card({ to, header, body, externalIcon = false }) {
+function Card({ to, header, body, externalIcon = false, productIcon = null }) {
+  const {colorMode} = useColorMode();
   /*
   Both the `header` and `body` expect an object with the following type
   header = {
@@ -12,25 +13,40 @@ function Card({ to, header, body, externalIcon = false }) {
   }
   */
 
+  const getProductIcon = () => {
+    if (!productIcon) {
+      return null;
+    }
+
+    if (colorMode === "light") {
+      return productIcon.light;
+    }
+
+    if (colorMode === 'dark') {
+      return productIcon.dark;
+    }
+  }
+
   return (
     <div className={clsx("col col--4 ", styles.feature)}>
       <Link className="navbar__link card" to={to}>
         <div className="card__header">
+          {getProductIcon() && <img src={getProductIcon()} height={32} width={32} alt={header.label}/>}
           <h3>
             {header.label}
             {externalIcon && (
-              <svg
-                width="13.5"
-                height="13.5"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className={styles.iconExternalIcon}
-              >
-                <path
-                  fill="currentColor"
-                  d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
-                ></path>
-              </svg>
+                <svg
+                    width="13.5"
+                    height="13.5"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className={styles.iconExternalIcon}
+                >
+                  <path
+                      fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"
+                  ></path>
+                </svg>
             )}
           </h3>
         </div>

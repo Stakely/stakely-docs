@@ -23,7 +23,7 @@ function Home() {
             }}
           >
             <br></br>
-            Welcome to the Stakely Documentation Hub
+              <span className="main-header--no-gradient">Welcome to the</span> <span className="main-header--gradient"> Stakely Documentation Hub</span>
           </h1>
           <section className={styles.features}>
             <div className="container">
@@ -36,6 +36,10 @@ function Home() {
                   body={{
                     label:"A complete B2B solution for adding staking features to your products and services. Tailored for Web3 protocols, financial institutions, service providers, wallets, and more."
                   }}
+                  productIcon={{
+                      light: 'https://img.stakely.io/assets/stakely-icons/staking_api_light.svg',
+                      dark: 'https://img.stakely.io/assets/stakely-icons/staking_api_dark.svg'
+                  }}
                 />
   
                 <Card
@@ -46,6 +50,10 @@ function Home() {
                   body={{
                     label:"A list of public and free-to-use endpoints for various blokchains. Use these nodes to interact with the blockchain without running your own node."
                   }}
+                  productIcon={{
+                      light: 'https://img.stakely.io/assets/stakely-icons/load_balancer_light.svg',
+                      dark: 'https://img.stakely.io/assets/stakely-icons/load_balancer_dark.svg'
+                  }}
                 />
 
                 <Card
@@ -55,6 +63,10 @@ function Home() {
                   }}
                   body={{
                     label:"Stake ETH on Obol DVT without the need to manage infrastructure or validator keys. Developed and operated by Stakely, simplifies staking for users by providing an easy-to-use interface while we handle the technical complexities."
+                  }}
+                  productIcon={{
+                      light: 'https://img.stakely.io/assets/stakely-icons/obol_portal_light.svg',
+                      dark: 'https://img.stakely.io/assets/stakely-icons/obol_portal_dark.svg'
                   }}
                 />
   

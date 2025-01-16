@@ -119,7 +119,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark', // Remove this line to use custom css in custom.css
         links: [
           {
             title: 'Learn',
