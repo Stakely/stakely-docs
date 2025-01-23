@@ -121,7 +121,7 @@ const config = {
       footer: {
         links: [
           {
-            title: 'Learn',
+            title: 'About Stakely',
             items: [
               {
                 label: 'Main Website',
