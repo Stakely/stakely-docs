@@ -131,6 +131,10 @@ const config = {
                 label: 'Blog',
                 href: 'https://stakely.io/blog',
               },
+              {
+                label: 'Security',
+                href: 'https://security.stakely.io/',
+              },
             ]
           },
           {
