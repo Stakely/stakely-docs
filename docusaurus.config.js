@@ -109,7 +109,7 @@ const config = {
           {
             href: 'https://stakely.io',
             position: 'right',
-            label: 'Main Website',
+            label: 'Stakely Home',
           },
           {
             href: 'https://github.com/Stakely/',
