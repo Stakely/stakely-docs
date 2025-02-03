@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: introduction
+title: Introduction
 ---
 
 # Simple CSM Documentation
