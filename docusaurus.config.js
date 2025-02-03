@@ -107,6 +107,12 @@ const config = {
             activeBasePath: 'obol-portal/',
           },
           {
+            to: "simple-csm/introduction",
+            label: "Simple CSM",
+            position: "left",
+            activeBasePath: 'simple-csm/',
+          },
+          {
             href: 'https://stakely.io',
             position: 'right',
             label: 'Stakely Home',

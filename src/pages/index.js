@@ -62,7 +62,7 @@ function Home() {
                     label:"Obol Portal"
                   }}
                   body={{
-                    label:"Stake ETH on Obol DVT without the need to manage infrastructure or validator keys. Developed and operated by Stakely, simplifies staking for users by providing an easy-to-use interface while we handle the technical complexities."
+                    label:"Stake ETH on Obol DVT without the need to manage infrastructure or validator keys. Developed and operated by Stakely, simplifies staking by handling the technical complexities."
                   }}
                   productIcon={{
                       light: 'https://img.stakely.io/assets/stakely-icons/obol_portal_light.svg',
@@ -71,12 +71,16 @@ function Home() {
                 />
   
                 <Card
-                  to="https://stakely.io"
+                  to="simple-csm/introduction"
                   header={{
-                    label:"Main Website"
+                    label:"Simple CSM"
                   }}
                   body={{
-                    label:"Visit our main website to learn more about Stakely, our products and services, team, tools, and educational content."
+                    label:"Built on top of Lido CSM, allows to run Ethereum validators with just 1.3 ETH while maximizing staking rewards by offering x2.3 more than vanilla staking."
+                  }}
+                  productIcon={{
+                      light: 'https://img.stakely.io/assets/stakely-icons/csm_provider_light.svg',
+                      dark: 'https://img.stakely.io/assets/stakely-icons/csm_provider_dark.svg'
                   }}
                 />
 
