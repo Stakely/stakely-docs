@@ -107,9 +107,15 @@ const config = {
             activeBasePath: 'obol-portal/',
           },
           {
+            to: "simple-csm/introduction",
+            label: "Simple CSM",
+            position: "left",
+            activeBasePath: 'simple-csm/',
+          },
+          {
             href: 'https://stakely.io',
             position: 'right',
-            label: 'Main Website',
+            label: 'Stakely Home',
           },
           {
             href: 'https://github.com/Stakely/',
@@ -121,7 +127,7 @@ const config = {
       footer: {
         links: [
           {
-            title: 'Learn',
+            title: 'About Stakely',
             items: [
               {
                 label: 'Main Website',
@@ -130,6 +136,10 @@ const config = {
               {
                 label: 'Blog',
                 href: 'https://stakely.io/blog',
+              },
+              {
+                label: 'Security',
+                href: 'https://security.stakely.io/',
               },
             ]
           },
