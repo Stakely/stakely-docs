@@ -1,0 +1,56 @@
+/* Footer styles */
+.footer {
+    background-color: var(--ifm-footer-bg-color);
+    border-top: solid 2px var(--ifm-footer-border-color);
+    color: var(--ifm-font-color-base);
+}
+
+.footer a {
+    color: var(--ifm-font-color-base);
+}
+
+.footer div {
+    color: var(--ifm-font-color-base);
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer__link-item svg {
+    fill: var(--stakely-primary-orange);
+    height: 13px;
+    width: 13px;
+}
+
+.footer__link-item {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer__link-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 3px;
+    background-color: var(--stakely-primary-orange);
+    transition: width 0.2s ease-in-out;
+}
+
+.footer__link-item:hover::after {
+    width: 100%;
+    text-decoration: none;
+}
+
+.footer__link-item:hover,
+.footer__link-item:focus,
+.footer__link-item:active {
+    text-decoration: none;
+    color: var(--ifm-font-color-base);
+}
