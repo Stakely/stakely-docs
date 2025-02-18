@@ -181,6 +181,11 @@ const config = {
           hideable: true,
         },
       },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
