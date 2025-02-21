@@ -30,11 +30,24 @@ In order to use staking api related endpoints you need to include your **API KEY
 
 ____
 
+### Chain ID param
+
+The chain id param is required for all the endpoints.
+
+:::warning
+
+Supported chains for stakewise staking are:
+
+- `1` for Ethereum Mainnet
+- `17000` for Ethereum Holesky
+:::
+
+____
 ### Stake into stakewise vault
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/eth/stakewise/action/stake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/action/stake)
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/action/stake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/{chainId}/action/stake)
 
 #### Description
 
@@ -54,7 +67,7 @@ ____
 
 Craft a unstake transaction
 
-- Endpoint: [`/api/v1/eth/stakewise/action/unstake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/action/unstake)
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/action/unstake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/{chainId}/action/unstake)
 
 #### Description
 
@@ -74,7 +87,7 @@ ____
 
 Craft a withdraw transaction
 
-- Endpoint: [`/api/v1/eth/stakewise/action/withdraw`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/action/withdraw)
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/action/withdraw`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/{chainId}/action/withdraw)
 
 #### Description
 
@@ -93,7 +106,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/eth/stakewise/action/prepare`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/action/prepare)
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/action/prepare`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/{chainId}/action/prepare)
 
 #### Description
 
@@ -113,7 +126,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/eth/stakewise/action/broadcast`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/action/broadcast)
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/action/broadcast`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/eth/stakewise/{chainId}/action/broadcast)
 
 #### Description
 
@@ -134,7 +147,7 @@ ____
 Get stakewise actions history for the given address
 
 
-- Endpoint: [`/api/v1/eth/stakewise/historic/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/historic/{address})
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/historic/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/{chainId}/historic/{address})
 
 #### Description
 
@@ -155,7 +168,7 @@ ____
 Get stakewise stake balance for the given address
 
 
-- Endpoint: [`/api/v1/eth/stakewise/stake-balance/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/stake-balance/{address})
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/stake-balance/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/{chainId}/stake-balance/{address})
 
 #### Description
 
@@ -177,7 +190,7 @@ ____
 Get stakewise exited balance for the given address
 
 
-- Endpoint: [`/api/v1/eth/stakewise/exited-balance/{address}​​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/exited-balance/{address})
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/exited-balance/{address}​​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/{chainId}/exited-balance/{address})
 
 #### Description
 
