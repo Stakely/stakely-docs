@@ -5,35 +5,14 @@
  DOCS:  https://docusaurus.community/knowledge/design/css/variables/
  */
 
+ @import "header.css";
+ @import "footer.css";
+ @import "card.css";
+ @import "banner.css";
  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
  .menu__link--active {
   font-weight: 500;
-}
-
-.navbar__link {
-  font-weight: 500;
-}
-
-.header--github-link {
-  width: 32px;
-  height: 32px;
-  padding: 6px;
-  margin-right: 4px;
-  border-radius: 50%;
-  transition: background var(--ifm-transition-fast);
-}
-
-.header--github-link:hover {
-  background: var(--ifm-color-emphasis-200);
-}
-
-.header--github-link:before {
-  content: "";
-  height: 100%;
-  display: block;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
-    no-repeat;
 }
 
 html[data-theme="dark"] .header--github-link:before {
@@ -54,6 +33,21 @@ html[data-theme="dark"] .header--github-link:before {
   --stakely-background-03: #0C1947;
   --stakely-background-04: #14296F;
   --stakely-background-05: #252F59;
+  --stakely-background-06: #0D1847;
+  --stakely-background-07: #2F3568;
+
+  --stakely-secondary-yellow-high: #F59D1F;
+  --stakely-secondary-yellow-medium: #F7C174;
+  --stakely-secondary-yellow-low: #FAEEDE;
+  --stakely-secondary-red-high: #F31715;
+  --stakely-secondary-red-medium: #F75D5C;
+  --stakely-secondary-red-low: #FFD3D3;
+  --stakely-secondary-blue-high: #0B8EE5;
+  --stakely-secondary-blue-medium: #4FB4F7;
+  --stakely-secondary-blue-low: #CFECFF;
+  --stakely-secondary-green-high: #07892D;
+  --stakely-secondary-green-medium: #4DBE6E;
+  --stakely-secondary-green-low: #D7FFE2;
 
   --ifm-font-color-base: var(--stakely-background-03);
   --ifm-menu-color-active: var(--stakely-primary-orange);
@@ -74,6 +68,7 @@ html[data-theme="dark"] .header--github-link:before {
 
   --ifm-navbar-background-color: var(--stakely-background-01);
   --ifm-background-color: var(--stakely-background-00) !important;
+  --ifm-color-info-dark: var(--stakely-secondary-blue-medium);
 }
 
 
@@ -108,126 +103,4 @@ html[data-theme="dark"] .header--github-link:before {
 
 body {
   background: var(--ifm-background-color);
-}
-
-
-.card {
-  border: solid 2px var(--stakely-background-01);
-}
-
-.card:hover {
-  border: solid 2px var(--stakely-background-04);
-}
-
-[data-theme="dark"] .card {
-  background-color: rgba(44, 46, 57, 0.4);
-  color: var(--stakely-background-00);
-  box-shadow: 0 8px 15px 2px rgba(35, 37, 46, 0.2);
-  border: solid 2px var(--stakely-background-05);
-}
-
-[data-theme="dark"] .card__header h3 {
-  color:  var(--stakely-primary-egg-white);
-}
-
-[data-theme="dark"]  .card:hover {
-  border: solid 2px var(--stakely-primary-orange);
-}
-
-[data-theme="dark"]  .card:hover .card__header h3 {
-  color:  var(--ifm-color-primary);
-}
-
-.cards__container {
-  margin: 3em 0;
-}
-
-.cards__container .col {
-  margin-bottom: 3em;
-}
-
-.card {
-  padding: 1rem;
-  margin-top: 0rem;
-  animation: fadeInUp 400ms backwards;
-  animation-delay: 150ms;
-  transition-property: all;
-  transition-duration: 200ms;
-  align-items: start;
-  height: 100%;
-  box-shadow: 0 8px 15px 2px rgba(86, 91, 115, 0.2);
-}
-
-.card a {
-  text-decoration: none;
-}
-
-.card:hover {
-  transform: translate(0px, -5px);
-}
-
-.card__header {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-.card__header h3 {
-  color: var(--stakely-background-04);
-}
-
-/* Footer styles */
-.footer {
-  background-color: var(--ifm-footer-bg-color);
-  border-top: solid 2px var(--ifm-footer-border-color);
-  color: var(--ifm-font-color-base);
-}
-
-.footer a {
-  color: var(--ifm-font-color-base);
-}
-
-.footer div {
-  color: var(--ifm-font-color-base);
-}
-
-.footer ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.footer__link-item svg {
-  fill: var(--stakely-primary-orange);
-  height: 13px;
-  width: 13px;
-}
-
-.footer__link-item {
-  position: relative;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.footer__link-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
-  width: 0;
-  height: 3px;
-  background-color: var(--stakely-primary-orange);
-  transition: width 0.2s ease-in-out;
-}
-
-.footer__link-item:hover::after {
-  width: 100%;
-  text-decoration: none;
-}
-
-.footer__link-item:hover,
-.footer__link-item:focus,
-.footer__link-item:active {
-  text-decoration: none;
-  color: var(--ifm-font-color-base);
 }

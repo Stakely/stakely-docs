@@ -80,12 +80,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/Stakely-io-logo.png',
+      image: 'img/STKL_Docs.webp',
       navbar: {
         logo: {
-          alt: 'Stakely Logo',
-          src: 'img/Stakely-io-logo.png',
-          srcDark: 'img/Stakely-io-logo-dark.png',
+          alt: 'Stakely Docs Logo',
+          src: 'img/STKL_Docs.webp',
+          srcDark: 'img/STKL_Docs_dark.png',
         },
         items: [
           {
@@ -180,6 +180,11 @@ const config = {
         sidebar: {
           hideable: true,
         },
+      },
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       prism: {
         theme: prismThemes.github,
