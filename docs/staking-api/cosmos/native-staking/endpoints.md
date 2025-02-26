@@ -28,13 +28,33 @@ In order to use staking api related endpoints you need to include your **API KEY
 | --------------- | ------------ | ------------ |------------ |
 | `X-API-KEY` | Your api key value | `<API_KEY_VALUE>` | ✅ |
 
+### ChainId
+
+The chainId is the id of the chain you want to stake/unstake/claim rewards.
+
+:::info
+ChainId is a string that identifies the blockchain network. It is used to specify the destination of the transaction.
+:::
+
+For example, if you want to stake/unstake/claim rewards on Cosmos Hub, you need to use the chainId `cosmoshub-4`.
+
+You can find the list of chainIds for each chain in the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). Select the directory of the chain you want to use and look for the `chain_id` field value.
+
+If you pass a wrong chainId or the chain is not yet supported, the endpoint will return a 404 error with the message `Blockchain not found`.
+
+:::tip
+
+If you need us to enable/support a new chain, please contact us at [admin@stakely.io](mailto:admin@stakely.io).
+
+:::
+
 ____
 
 ### Stake action
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/cosmos/action/stake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/stake)
+- Endpoint: [`/api/v1/cosmos/{chainId}/action/stake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/stake)
 
 #### Description
 
@@ -54,7 +74,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/cosmos/action/ustake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/unstake)
+- Endpoint: [`/api/v1/cosmos/{chainId}/action/unstake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/unstake)
 
 #### Description
 
@@ -74,7 +94,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/cosmos/action/claim-rewards`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/claim-rewards)
+- Endpoint: [`/api/v1/cosmos/{chainId}/action/claim-rewards`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/claim-rewards)
 
 #### Description
 
@@ -94,7 +114,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/cosmos/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/prepare)
+- Endpoint: [`/api/v1/cosmos/{chainId}/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/prepare)
 
 #### Description
 
@@ -114,7 +134,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/cosmos/action/broadcast`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/action/broadcast)
+- Endpoint: [`/api/v1/cosmos/{chainId}/action/broadcast`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/broadcast)
 
 #### Description
 

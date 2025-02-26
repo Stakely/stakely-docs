@@ -12,7 +12,7 @@ Staking on Cosmos Hub involves delegating ATOMs, the native cryptocurrency of th
 
 ### Unstake (Undelegation)
 
-Unstaking in Cosmos Hub is called undelegation. It is the process of withdrawing staked tokens from a validator, which is subject to an unbonding period.
+Unstaking in Cosmos ecosystem is called undelegation. It is the process of withdrawing staked tokens from a validator, which is subject to an unbonding period.
 
     1. **Initiate Undelegation**: Use the undelegate function to start the process of withdrawing your staked ATOMs from the validator.
     2. **Unbonding Period**: Undelegated tokens are locked for a 21-day unbonding period, during which they do not earn rewards and cannot be transferred.
