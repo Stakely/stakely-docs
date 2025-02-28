@@ -19,7 +19,7 @@
     "@docusaurus/theme-mermaid": "^3.5.2",
     "@easyops-cn/docusaurus-search-local": "^0.44.2",
     "@mdx-js/react": "^3.0.0",
-    "@scalar/docusaurus": "^0.3.5",
+    "@scalar/docusaurus": "^0.4.200",
     "clsx": "^2.0.0",
     "docusaurus-preset-openapi": "^0.7.5",
     "dotenv": "^16.4.5",
