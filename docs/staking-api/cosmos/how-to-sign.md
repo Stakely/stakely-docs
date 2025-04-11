@@ -70,12 +70,14 @@ const signUnsignedTxWithPk = async ({unsigned_tx_hex, tx_auth_info_hex}) => {
 
   const signature_hex= toHex(decodedSignature.signature)
 
-  return signature_hex;
+  const txBodyHex = toHex(signed.bodyBytes)
+  
+  return { signature_hex, tx_body_hex };
 }
 // Get unsigned_tx_hex and tx_auth_info_hex from stake action response (reference at doc models StakeActionResponseDTO)
 
-const signature_hex = await signUnsignedTxWithPk({unsigned_tx_hex, tx_auth_info_hex })
-// With the Signature you need to pass it to the /prepare endpoint
+const { signature_hex, tx_body_hex } = await signUnsignedTxWithPk({unsigned_tx_hex, tx_auth_info_hex })
+// You need to pass both values (signature_hex, tx_body_hex) + tx_auth_info_hex (obtained from any of the actions endpoints) to the prepare endpoint
 // Check api reference
 
 ```
