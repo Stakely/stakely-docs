@@ -39,7 +39,7 @@ The chain id param is required for all the endpoints.
 Supported chains for stakewise staking are:
 
 - `1` for Ethereum Mainnet
-- `17000` for Ethereum Holesky
+- `560048` for Ethereum Hoodi
 :::
 
 ____

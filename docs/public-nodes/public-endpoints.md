@@ -40,12 +40,16 @@ We support a variety of blockchain networks, offering both standard and load bal
 | Somnia                  |       JSON-RPC  |       ✅      |     https://somnia-json-rpc.stakely.io   |
 | Union                   |       RPC       |       ✅      |     https://union-rpc.stakely.io   |
 | Union                   |       LCD       |       ✅      |     https://union-lcd.stakely.io   |
+| Sui                     |       JSON-RPC  |       ✅      |     https://sui-json-rpc-server-01.stakely.io   |
+| Walrus Aggregator       |       REST      |       ✅      |     https://walrus-aggregator.stakely.io/status   |
 
 
 ## Testnets
 | Blockchain                      | Endpoint type  | Load Balanced? | URL | 
 | ------------------------------- | :-------------:| :------------: | ------------ |
 | Ethereum Hoodi Checkpointz      |       REST     |       ❌       |     https://hoodi-checkpoint-sync.stakely.io   |
+| Walrus Testnet Aggregator       |       REST     |       ✅      |     https://walrus-testnet-aggregator.stakely.io/status   |
+| Walrus Testnet Publisher        |       REST     |       ✅      |     https://walrus-testnet-publisher.stakely.io/status   |
 
 
 Please note that while these endpoints are continuously monitored for optimal performance, they are part of a free service, and as such, we cannot guarantee specific uptimes or request limits. If your needs surpass the capabilities of our complimentary offerings, we invite you to contact us.

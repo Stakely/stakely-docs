@@ -35,7 +35,6 @@ The Obol Portal offers a non-custodial service, meaning users always retain cont
 9. **Ethereum Native Staking**: Supports staking in multiples of 32 ETH since it is native staking, interacting directly with the official Ethereum deposit contract. No pooling or restaking risks are involved.
 
 10. **Testnet and Mainnet Availability**: 
-    - Holesky Testnet: [holesky-obol-portal.stakely.io](https://holesky-obol-portal.stakely.io)
     - Ethereum Mainnet: [obol-portal.stakely.io](https://obol-portal.stakely.io)
 
 ### Fee Structure
