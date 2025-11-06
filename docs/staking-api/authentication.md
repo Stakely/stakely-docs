@@ -2,41 +2,30 @@
 sidebar_position: 4
 ---
 
+import AppUrl from '@site/src/components/AppUrl';
+
 # Authentication
 
 This page outlines the necessary steps and protocols for securely interacting with our API, ensuring that your data remains safe and your transactions are securely processed.
 
+## Auth
 
-## Auth Endpoints
+To use the Staking API, you must be registered with an account on <AppUrl />. If you don't have an account yet, you can <AppUrl path="/sign-up">register here</AppUrl>.
 
-These endpoints are designed to handle requests related to user authentication and security, ensuring that only authorized users can access specific functionalities of the system:
+Once registered, <AppUrl path="/sign-in">login into your account</AppUrl>, you'll have access to all the products that Stakely offers, all using the same simplified account.
 
-
-- **Register** [`/api/v1/auth/email/register`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/register) Although you can register using your desired email and password, your account will need to be manually activated. Please contact us before using this endpoint.
-- **Login** [`/api/v1/auth/email/login`](/staking-api/api-reference#tag/auth/post/api/v1/auth/email/login) Use this endpoint to login and retrieve the JWT token, used to manage API keys.
-- **Manage API Keys** [`/apikeys`](/staking-api/api-reference#tag/apikeys) This includes creating new API keys, listing all your existing keys, and deleting any keys that are no longer needed.
-
-## Beta Stage Registration
-
-As Stakely's Staking API is currently in the beta stage, registering to use our service requires manual whitelisting. If you wish to try our product, please reach out to us.
-
+Manage your API keys in the Staking API dashboard at <AppUrl path="/staking-api" />. The dashboard provides a simple interface to create new keys, view existing keys, and delete keys you no longer need.
 
 ## Using the API Keys
 
-To interact with the crafting and reporting aspects of our API, you must use the API keys obtained through the admin endpoints. The key must be included as an authorization header in your requests.
+To access the crafting and reporting endpoints, you must authenticate using API keys generated through the Staking API web app at <AppUrl />.
 
-
-:::info
-Authentication for these endpoints is based on JSON Web Tokens (JWT).
-:::
-
-
-Once logged in with the user, you will receive a JWT that can be used to create new API keys. API keys are only returned upon creation. Be sure to copy and save the API key in a secure location. Afterwards, you can still manage, list, edit, and delete existing API keys with the login endpoint.
-
-The header used for API key authentication is `X-API-KEY`.
+Include your API key in the `X-API-KEY` header with every request:
+```http
+X-API-KEY: your-api-key-here
+```
 
 For examples and pre-created code snippets in various programming languages, which will help you integrate our services smoothly, please refer to our API schema available [here](/staking-api/api-reference).
-
 
 ## Security and Verification
 

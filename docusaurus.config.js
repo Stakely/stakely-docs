@@ -11,9 +11,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
     markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    }
   },
   customFields: {
     stakingApiUrl: process.env.STAKING_API_URL,
+    appUrl: process.env.APP_URL,
   },
   title: 'Stakely Docs',
   favicon: 'img/favicon.ico',
@@ -28,9 +32,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'stakely', // Usually your GitHub org/user name.
   projectName: 'stakely-docs', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

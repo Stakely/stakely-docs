@@ -22,6 +22,13 @@ You can check the **Staking API Reference** here:
 
 In order to use staking api related endpoints you need to include your **API KEY**
 
+:::tip
+
+**Heads up!**
+To obtain a valid API key required for authentication, please refer to the [Authentication > Auth](/staking-api/authentication#auth) section of the documentation.
+
+:::
+
 **Header:**
 
 | Name      | Description | Example value | Required
