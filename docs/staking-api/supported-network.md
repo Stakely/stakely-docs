@@ -14,7 +14,8 @@ This page provides a comprehensive list of the blockchain networks currently sup
 | Omniflix        |       ✅     |       ❌      |
 | Juno        |       ✅     |       ❌      |
 | Ethereum (native) |       ✅     |       ❌      |
-| Ethereum (Stakewise) |    ✅  |       ❌      |
+| Ethereum mainnet (Stakewise) |    ✅  |       ❌      |
+| Ethereum hoodi (Stakewise) |    ✅  |       ❌      |
 | Solana          |    ✅        |       ❌      |
 | Injective       |       ❌     |       ❌      |
 | Sui             |       ❌     |       ❌      |

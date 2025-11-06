@@ -22,6 +22,13 @@ You can check the **Staking API Reference** here:
 
 In order to use staking api related endpoints you need to include your **API KEY**
 
+:::tip
+
+**Heads up!**
+To obtain a valid API key required for authentication, please refer to the [Authentication > Auth](/staking-api/authentication#auth) section of the documentation.
+
+:::
+
 **Header:**
 
 | Name      | Description | Example value | Required
@@ -204,3 +211,37 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 Array of [`StakewiseGetExitedBalanceResponseDto`](/staking-api/api-reference#model/stakewisegetexitedbalanceresponsedto)
 
+____
+
+
+### Vault info
+
+Get stakewise vault info such as APY and balance for the current time
+
+
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/vault​​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/{chainId}/vault)
+
+#### Description
+
+Get vault details, as current APY
+
+#### Returned
+
+Array of [`StakewiseGetVaultResponseDto`](/staking-api/api-reference#model/stakewisegetvaultresponsedto)
+
+____
+
+
+### User Stats
+
+Get user stats for stakewise vault for N days
+
+- Endpoint: [`/api/v1/eth/stakewise/{chainId}/stats/{address}`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/eth/stakewise/{chainId}/stats/{address})
+
+#### Description
+
+Get vault details, as current APY
+
+#### Returned
+
+Array of [`StakewiseGetUserStatsResponseDto`](/staking-api/api-reference#model/stakewisegetuserstatsresponsedto)

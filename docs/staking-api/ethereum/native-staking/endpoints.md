@@ -5,16 +5,8 @@ sidebar_position: 2
 
 import StakingOpenApiLink from '@site/src/components/StakingOpenApiLink';
 
-
 ## API Usage
 Once you already have access to the Staking API with a validated user and existing apikeys you can start using this service.
-
-:::warning
-
-In order to use this module endpoints, **you will need to request access to stakely admin@stakely.io**.
-
-<u>The module is restricted for whitelisted users</u>.
-:::
 
 ### API Reference docs
 
