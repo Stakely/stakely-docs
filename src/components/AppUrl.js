@@ -12,8 +12,21 @@ const AppUrl = ({path = '', children}) => {
   const {
     siteConfig: {customFields},
   } = useDocusaurusContext();
-  const appUrl = customFields.appUrl || 'APP_URL';
-  const fullUrl = path ? `${appUrl}${path}` : appUrl;
+  const appUrl = customFields.appUrl;
+
+  if (!appUrl) {
+    console.error('APP_URL is not set in environment variables');
+    return <span>APP_URL</span>;
+  }
+
+  // Ensure the URL is absolute (starts with http:// or https://)
+  const baseUrl = appUrl.startsWith('http://') || appUrl.startsWith('https://')
+    ? appUrl
+    : `https://${appUrl}`;
+
+  // Remove trailing slash from baseUrl if present, then add path
+  const cleanBaseUrl = baseUrl.replace(/\/$/, '');
+  const fullUrl = path ? `${cleanBaseUrl}${path}` : cleanBaseUrl;
   const linkText = children || fullUrl;
 
   return (
