@@ -24,29 +24,37 @@ In order to use staking api related endpoints you need to include your **API KEY
 
 **Header:**
 
-| Name      | Description | Example value | Required
-| --------------- | ------------ | ------------ |------------ |
+| Name        | Description | Example value | Required |
+|-------------|-------------|---------------|----------|
 | `X-API-KEY` | Your api key value | `<API_KEY_VALUE>` | ✅ |
+| `X-NETWORK` | Blockchain network/chain identifier | `cosmoshub-4` | ⚪ |
 
-### ChainId
+### X-NETWORK header
 
-The chainId is the id of the chain you want to stake/unstake/claim rewards.
+Use the `X-NETWORK` header to tell the API which Cosmos network should process the request (e.g., `cosmoshub-4`, `juno-1`).
 
-:::info
-ChainId is a string that identifies the blockchain network. It is used to specify the destination of the transaction.
-:::
+::::info
+`X-NETWORK` accepts the same identifier exposed as `chain_id` in the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). When the header is omitted the default Cosmos network configured for your account will be used.
+::::
 
-For example, if you want to stake/unstake/claim rewards on Cosmos Hub, you need to use the chainId `cosmoshub-4`.
+::::tip
+Need support for another network? Reach out at [admin@stakely.io](mailto:admin@stakely.io).
+::::
 
-You can find the list of chainIds for each chain in the [Cosmos Chain Registry](https://github.com/cosmos/chain-registry). Select the directory of the chain you want to use and look for the `chain_id` field value.
+### List available networks
 
-If you pass a wrong chainId or the chain is not yet supported, the endpoint will return a 404 error with the message `Blockchain not found`.
+If you are unsure which Cosmos networks are enabled for your account you can ask the API directly.
 
-:::tip
+- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmos/get/api/v1/cosmos/native/networks)
 
-If you need us to enable/support a new chain, please contact us at [admin@stakely.io](mailto:admin@stakely.io).
+Each object in the response includes:
 
-:::
+| Field | Description |
+|-------|-------------|
+| `name` | Internal name of the blockchain entry |
+| `type` | Blockchain type string (always `COSMOS`) |
+| `chain_id` | Chain identifier, same as the Cosmos Chain Registry `chain_id` |
+| `is_default` | `true` when this network is used as fallback |
 
 ____
 
@@ -54,7 +62,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/cosmos/{chainId}/action/stake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/stake)
+- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/stake)
 
 #### Description
 
@@ -74,7 +82,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/cosmos/{chainId}/action/unstake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/unstake)
+- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/unstake)
 
 #### Description
 
@@ -94,7 +102,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/cosmos/{chainId}/action/claim-rewards`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/claim-rewards)
+- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/claim-rewards)
 
 #### Description
 
@@ -114,7 +122,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/cosmos/{chainId}/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/prepare)
+- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/prepare)
 
 #### Description
 
@@ -134,7 +142,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/cosmos/{chainId}/action/broadcast`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/{chainId}/action/broadcast)
+- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/broadcast)
 
 #### Description
 
