@@ -45,7 +45,7 @@ Need support for another network? Reach out at [admin@stakely.io](mailto:admin@s
 
 If you are unsure which Cosmos networks are enabled for your account you can ask the API directly.
 
-- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmos/get/api/v1/cosmos/native/networks)
+- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmoshub/get/apiv1cosmoshubnativenetworks)
 
 Each object in the response includes:
 
@@ -62,7 +62,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/stake)
+- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionstake)
 
 #### Description
 
@@ -82,7 +82,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/unstake)
+- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionunstake)
 
 #### Description
 
@@ -102,7 +102,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/claim-rewards)
+- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionclaimrewards)
 
 #### Description
 
@@ -122,7 +122,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/prepare)
+- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionprepare)
 
 #### Description
 
@@ -142,7 +142,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmos/post/api/v1/cosmos/native/action/broadcast)
+- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionbroadcast)
 
 #### Description
 

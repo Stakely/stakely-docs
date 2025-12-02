@@ -52,7 +52,7 @@ When omitted the API falls back to the default Stakewise network configured for 
 
 Use this helper endpoint to discover which Stakewise networks are currently enabled for your API key.
 
-- Endpoint: [`/api/v1/ethereum/stakewise/networks`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/networks)
+- Endpoint: [`/api/v1/ethereum/stakewise/networks`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewisenetworks)
 
 Response payload fields:
 
@@ -68,7 +68,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/stake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/ethereum/stakewise/action/stake)
+- Endpoint: [`/api/v1/ethereum/stakewise/action/stake​`](/staking-api/api-reference#tag/ethereumstakewise/post/apiv1ethereumstakewiseactionstake)
 
 #### Description
 
@@ -88,7 +88,7 @@ ____
 
 Craft a unstake transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/unstake​`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/ethereum/stakewise/action/unstake)
+- Endpoint: [`/api/v1/ethereum/stakewise/action/unstake​`](/staking-api/api-reference#tag/ethereumstakewise/post/apiv1ethereumstakewiseactionunstake)
 
 #### Description
 
@@ -108,7 +108,7 @@ ____
 
 Craft a withdraw transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/withdraw`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/ethereum/stakewise/action/withdraw)
+- Endpoint: [`/api/v1/ethereum/stakewise/action/withdraw`](/staking-api/api-reference#tag/ethereumstakewise/post/apiv1ethereumstakewiseactionwithdraw)
 
 #### Description
 
@@ -127,7 +127,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/prepare`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/ethereum/stakewise/action/prepare)
+- Endpoint: [`/api/v1/ethereum/stakewise/action/prepare`](/staking-api/api-reference#tag/ethereumstakewise/post/apiv1ethereumstakewiseactionprepare)
 
 #### Description
 
@@ -147,7 +147,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/broadcast`](/staking-api/api-reference#tag/eth-stakewise/post/api/v1/ethereum/stakewise/action/broadcast)
+- Endpoint: [`/api/v1/ethereum/stakewise/action/broadcast`](/staking-api/api-reference#tag/ethereumstakewise/post/apiv1ethereumstakewiseactionbroadcast)
 
 #### Description
 
@@ -168,7 +168,7 @@ ____
 Get stakewise actions history for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/historic/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/historic/{address})
+- Endpoint: [`/api/v1/ethereum/stakewise/historic/{address}​`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewisehistoricaddress)
 
 #### Description
 
@@ -189,7 +189,7 @@ ____
 Get stakewise stake balance for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/stake-balance/{address}​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/stake-balance/{address})
+- Endpoint: [`/api/v1/ethereum/stakewise/stake-balance/{address}​`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewisestakebalanceaddress)
 
 #### Description
 
@@ -211,7 +211,7 @@ ____
 Get stakewise exited balance for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/exited-balance/{address}​​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/exited-balance/{address})
+- Endpoint: [`/api/v1/ethereum/stakewise/exited-balance/{address}​​`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewiseexitedbalanceaddress)
 
 #### Description
 
@@ -233,7 +233,7 @@ ____
 Get stakewise vault info such as APY and balance for the current time
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/vault​​`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/vault)
+- Endpoint: [`/api/v1/ethereum/stakewise/vault​​`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewisevault)
 
 #### Description
 
@@ -250,7 +250,7 @@ ____
 
 Get user stats for stakewise vault for N days
 
-- Endpoint: [`/api/v1/ethereum/stakewise/stats/{address}`](/staking-api/api-reference#tag/eth-stakewise/get/api/v1/ethereum/stakewise/stats/{address})
+- Endpoint: [`/api/v1/ethereum/stakewise/stats/{address}`](/staking-api/api-reference#tag/ethereumstakewise/get/apiv1ethereumstakewisestatsaddress)
 
 #### Description
 
