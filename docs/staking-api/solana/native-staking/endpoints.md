@@ -24,9 +24,37 @@ In order to use staking api related endpoints you need to include your **API KEY
 
 **Header:**
 
-| Name      | Description | Example value | Required
-| --------------- | ------------ | ------------ |------------ |
+| Name        | Description | Example value | Required |
+|-------------|-------------|---------------|----------|
 | `X-API-KEY` | Your api key value | `<API_KEY_VALUE>` | ✅ |
+| `X-NETWORK` | Blockchain network/cluster identifier | `mainnet-beta` | ⚪ |
+
+### X-NETWORK header
+
+Use the `X-NETWORK` header to select the Solana cluster to operate on (e.g., `mainnet-beta`, `devnet`).
+
+::::info
+Supported values match the RPC cluster identifier that Solana exposes (the `cluster` argument in web3). If you omit the header the API falls back to the default Solana network configured for your account.
+::::
+
+::::tip
+Currently supported values: `mainnet-beta` and `devnet`. Contact [admin@stakely.io](mailto:admin@stakely.io) if you need another cluster enabled.
+::::
+
+### List available networks
+
+Need to know which Solana clusters are enabled for your API key? Ask the API directly.
+
+- Endpoint: [`/api/v1/solana/native/networks`](/staking-api/api-reference#tag/solana/get/apiv1solananativenetworks)
+
+Each item in the response includes:
+
+| Field | Description |
+|-------|-------------|
+| `name` | Internal descriptor for the Solana blockchain entry |
+| `type` | Blockchain type string (always `SOLANA`) |
+| `chain_id` | Cluster identifier such as `mainnet-beta` or `devnet` |
+| `is_default` | `true` when the cluster is used as fallback |
 
 ____
 
@@ -34,7 +62,7 @@ ____
 
 Craft a create nonce account transaction:
 
-- Endpoint: [`/api/v1/solana/action/create-nonce-account`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/create-nonce-account)
+- Endpoint: [`/api/v1/solana/native/action/create-nonce-account`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactioncreatenonceaccount)
 
 #### Description
 
@@ -55,7 +83,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/solana/action/stake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/stake)
+- Endpoint: [`/api/v1/solana/native/action/stake`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionstake)
 
 #### Description
 
@@ -77,7 +105,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/solana/action/ustake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/unstake)
+- Endpoint: [`/api/v1/solana/native/action/unstake`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionunstake)
 
 #### Description
 
@@ -99,7 +127,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/solana/action/withdraw`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/withdraw)
+- Endpoint: [`/api/v1/solana/native/action/withdraw`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionwithdraw)
 
 #### Description
 
@@ -124,7 +152,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/solana/action/prepare`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/prepare)
+- Endpoint: [`/api/v1/solana/native/action/prepare`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionprepare)
 
 #### Description
 
@@ -144,7 +172,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/solana/action/broadcast`](/staking-api/api-reference#tag/solana/post/api/v1/solana/action/broadcast)
+- Endpoint: [`/api/v1/solana/native/action/broadcast`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionbroadcast)
 
 #### Description
 

@@ -30,9 +30,37 @@ To obtain a valid API key required for authentication, please refer to the [Auth
 
 **Header:**
 
-| Name      | Description | Example value | Required
-| --------------- | ------------ | ------------ |------------ |
+| Name        | Description | Example value | Required |
+|-------------|-------------|---------------|----------|
 | `X-API-KEY` | Your api key value | `<API_KEY_VALUE>` | ✅ |
+| `X-NETWORK` | Blockchain network identifier | `143` | ⚪ |
+
+### X-NETWORK header
+
+Use the `X-NETWORK` header to select the Monad network (currently `143` for Monad Mainnet).
+
+::::info
+If you omit the header the API falls back to the default Monad network configured for your account.
+::::
+
+::::tip
+Need another Monad environment exposed? Let us know at [admin@stakely.io](mailto:admin@stakely.io).
+::::
+
+### List available networks
+
+Use this helper endpoint to obtain the list of Monad staking networks that are currently enabled for your API key.
+
+- Endpoint: [`/api/v1/monad/native/networks`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativenetworks)
+
+Response payload fields:
+
+| Field | Description |
+|-------|-------------|
+| `name` | Internal blockchain entry name |
+| `type` | Blockchain type string (always `ETHEREUM`) |
+| `chain_id` | Chain identifier (currently `143`) |
+| `is_default` | `true` when this network is used as fallback |
 
 ____
 
@@ -40,7 +68,7 @@ ____
 
 Craft a delegate transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/delegate`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/delegate)
+- Endpoint: [`/api/v1/monad/native/action/delegate`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactiondelegate)
 
 #### Description
 
@@ -60,7 +88,7 @@ ____
 
 Craft an undelegate transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/undelegate`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/undelegate)
+- Endpoint: [`/api/v1/monad/native/action/undelegate`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionundelegate)
 
 #### Description
 
@@ -80,7 +108,7 @@ ____
 
 Craft a withdraw transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/withdraw`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/withdraw)
+- Endpoint: [`/api/v1/monad/native/action/withdraw`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionwithdraw)
 
 #### Description
 
@@ -100,7 +128,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/claim-rewards`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/claim-rewards)
+- Endpoint: [`/api/v1/monad/native/action/claim-rewards`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionclaimrewards)
 
 #### Description
 
@@ -120,7 +148,7 @@ ____
 
 Craft a compound rewards transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/compound`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/compound)
+- Endpoint: [`/api/v1/monad/native/action/compound`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactioncompound)
 
 #### Description
 
@@ -140,7 +168,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/eth/monad/action/prepare`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/prepare)
+- Endpoint: [`/api/v1/monad/native/action/prepare`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionprepare)
 
 #### Description
 
@@ -160,7 +188,7 @@ ____
 
 Broadcast a signed transaction:
 
-- Endpoint: [`/api/v1/eth/monad/action/broadcast`](/staking-api/api-reference#tag/eth-monad/post/api/v1/eth/monad/action/broadcast)
+- Endpoint: [`/api/v1/monad/native/action/broadcast`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionbroadcast)
 
 #### Description
 
@@ -180,7 +208,7 @@ ____
 
 Get stake balance for the given address:
 
-- Endpoint: [`/api/v1/eth/monad/stake-balance/{address}`](/staking-api/api-reference#tag/eth-monad/get/api/v1/eth/monad/stake-balance/{address})
+- Endpoint: [`/api/v1/monad/native/stake-balance/{address}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativestakebalanceaddress)
 
 #### Description
 
@@ -200,7 +228,7 @@ ____
 
 Get withdrawal requests for the given address:
 
-- Endpoint: [`/api/v1/eth/monad/withdrawals/{address}`](/staking-api/api-reference#tag/eth-monad/get/api/v1/eth/monad/withdrawals/{address})
+- Endpoint: [`/api/v1/monad/native/withdrawals/{address}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativewithdrawalsaddress)
 
 #### Description
 
@@ -227,7 +255,7 @@ ____
 
 Get a single withdrawal request:
 
-- Endpoint: [`/api/v1/eth/monad/withdrawal/{address}/{withdrawId}`](/staking-api/api-reference#tag/eth-monad/get/api/v1/eth/monad/withdrawal/{address}/{withdrawId})
+- Endpoint: [`/api/v1/monad/native/withdrawal/{address}/{withdrawId}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativewithdrawaladdresswithdrawid)
 
 #### Description
 
