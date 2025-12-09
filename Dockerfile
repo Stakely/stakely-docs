@@ -2,7 +2,7 @@
 
 # Stage 1: Base image.
 ## Start with a base image containing NodeJS so we can build Docusaurus.
-FROM node:lts-slim as base
+FROM node:24.11.1-slim as base
 ## Enable corepack.
 # RUN corepack enable 
 ## Set the working directory to `/opt/docusaurus`.
