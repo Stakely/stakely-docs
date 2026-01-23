@@ -9,7 +9,7 @@ title: Introduction
 
 # Introduction
 
-**Simple CSM** is a managed service built by **Stakely** on top of **Lido CSM (Community Staking Module)**. This documentation provides an overview of the product's inner workings. It assumes basic knowledge of **Lido** and **Ethereum** and avoids diving too deeply into technical concepts outside the scope of this guide.
+**Simple CSM** is a managed service built by **Stakely** on top of **Lido CSM ([Community Staking Module](https://lido.fi/csm))**. This documentation provides an overview of the product's inner workings. It assumes basic knowledge of **Lido** and **Ethereum** and avoids diving too deeply into technical concepts outside the scope of this guide.
 
 <br></br>
 
@@ -23,7 +23,7 @@ Before diving in, let’s define some key terms:
   - **Simple DVT Module**: For groups of individuals and staking companies.
   - **CSM (Community Staking Module)**: A permissionless module where anyone can run validators by providing a bond.
 
-- **Lido CSM**: This module is **completely permissionless**, allowing anyone to run validators for Lido. A bond ranging between **1.3 ETH** and **2.4 ETH** per validator is required as a guarantee of proper participation. This documentation will explore the inner workings of this module in detail.
+- **Lido CSM**: This module is **completely permissionless**, allowing anyone to run validators using Lido. A bond ranging between **1.3 ETH** and **2.4 ETH** per validator is required as a guarantee of proper participation. This documentation will explore the inner workings of this module in detail.
 
 With these concepts in mind, **Simple CSM by Stakely** enables users to leverage Stakely’s infrastructure to run validators for Lido. This setup allows users to earn **over x2** the rewards of standard staking, as they earn rewards from both the bond and the validator commissions.
 
@@ -46,9 +46,9 @@ This section explains the staking flow chronologically, from Stakely’s backend
 3. **Lido Interface Interaction**:
    - The client navigates to the **Lido CSM interface** (`csm.lido.fi`) and pastes the deposit data.
    - A transaction is performed, including the calculated bond:
-     - **First validator**: **2.4 ETH** (or **1.5 ETH** with an early adopter badge).
+     - **First validator**: **2.4 ETH** (or **1.5 ETH** with an ICS or legacy EA badge).
      - **Subsequent validators**: **1.3 ETH**.
-   - The bond can be paid in **ETH** or **stETH**, but it is always converted to **stETH** to start earning rewards immediately.
+   - The bond can be provided in **ETH**, **stETH**, or **wstETH**, but it is always converted to **stETH** to start earning rewards immediately.
 
 4. **ETH Deposit**:
    - Lido deposits **32 ETH** into the validators when enough ETH is available. This process can take hours or days, depending on the demand for staking on Lido. More details about the stake allocation mechanism available [here](https://operatorportal.lido.fi/modules/community-staking-module#block-4979446857e44503942bd80678465607).
@@ -71,9 +71,9 @@ Exiting is the process of leaving the Ethereum validator set. In Simple CSM, thi
    - The duration of these queues depends on the network exit demand and other factors that are out of the scope of this documentation.
 
 3. **Finalize Exit on Lido**:
-   - Once the validator is fully exited, you can remove your validator keys from the **Lido CSM UI** and claim your bond.
+   - Once the validator is fully exited, you can claim your bond from the **Lido CSM UI**.
 
-**Note**: In the upcoming Ethereum upgrade (codenamed **Petra**), Lido will support exits without relying on Stakely. However, the Stakely UI option will remain available.
+**Note**: Lido now supports exits without relying on Stakely. However, the Stakely UI option will remain available.
 
 <br></br>
 
@@ -82,10 +82,10 @@ Exiting is the process of leaving the Ethereum validator set. In Simple CSM, thi
 Simple CSM enables users to earn **over 2x** the standard Ethereum staking APR. Here’s how it works:
 
 1. **Bond Rewards**:
-   - The bond (in ETH or stETH) is converted to **stETH**, earning standard Ethereum staking rewards. These rewards are distributed daily.
+   - The bond (in ETH, stETH, or wstETH) is converted to **stETH**, earning Ethereum staking rewards from Lido. These rewards are distributed daily.
 
 2. **Validator Commissions**:
-   - By running validators for Lido, you earn additional rewards from validator commissions. These rewards are distributed monthly.
+   - By running validators using Lido, you earn additional rewards from validator commissions. These rewards are distributed every 28 days.
 
 Rewards can be claimed anytime through the Lido CSM dashboard.
 
