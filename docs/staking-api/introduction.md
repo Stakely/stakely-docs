@@ -1,18 +1,17 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Introduction
 ---
 
 # What is the Stakely Staking API
-
-The Stakely Staking API is a B2B API suite that lets you integrate staking functionality into your product with minimal effort. It is built for non-custodial wallets, exchanges, fintech platforms, institutions, integrators, and custodians that want to offer staking without managing their own infrastructure.
+The Stakely Staking API is an interface that lets you integrate staking functionality into your product with minimal effort, handling protocol-level differences and minimizing the need for network-specific implementation logic. It is built for non-custodial wallets, exchanges, fintech platforms, institutions, integrators, and custodians that want to offer staking without managing their own infrastructure.
 The API is production-ready and supports multiple networks through a single, unified REST interface. It also enables flexible revenue-sharing models, making it suitable for different business setups.
 
 All Stakely infrastructure is SOC 2 Type II and ISO 27001 certified and is subject to regular security audits.
 
 
 :::info
-The Stakely Staking API is an integration layer, not a dependency. It is designed to simplify and accelerate staking integrations, but partners can always use native blockchain methods to interact directly with Stakely validators and reach the same revenue-sharing agreements independently of the API.
+The Stakely Staking API is an integration helper, not a requirement. It is designed to simplify and accelerate staking integrations, but anyone can always use native blockchain methods to interact directly with Stakely validators and reach the same revenue-sharing agreements independently of the API.
 
 All staking operations are fully on-chain. Even in the unlikely event that the API or Stakely infrastructure were to become unavailable, withdrawing funds would never be at risk, as staking and unstaking can always be performed through the blockchain’s native methods.
 :::
@@ -22,7 +21,9 @@ All staking operations are fully on-chain. Even in the unlikely event that the A
 
 * **Multi-network support**: Blockchains differ significantly in their staking mechanics, and integrating each network independently requires substantial technical effort. The Stakely Staking API supports multiple networks using consistent methods, abstracting protocol-level complexity and making multi-chain staking integrations much easier.
 
-* **Transaction crafting**: The API prepares complete transaction payloads, so you only need to sign them. This significantly reduces the effort required to integrate staking for a new blockchain and keeps signing fully under your control.
+* **Transaction crafting**: The API prepares complete transaction payloads, which are then signed by the integrating application. This significantly reduces the effort required to integrate staking for a new blockchain and keeps signing fully under your control.
+
+* **Staking state and data access**: In addition to transaction crafting, the API exposes read-only methods to retrieve staking-related on-chain data. Examples of this are active staking positions, pending rewards, and APR. This allows applications to display staking state without implementing network-specific indexing or parsing logic.
 
 * **Non-custodial by design**: Stakely never manages private keys. All transactions are signed by you using your preferred signing setup. You can sign locally, via a custodian like Fireblocks, hardware device, MPC wallet, or any other signing method. We only generate the transaction payloads. The documentation includes examples showing how to sign transactions using different signing approaches.
 
@@ -32,7 +33,7 @@ All staking operations are fully on-chain. Even in the unlikely event that the A
 
 ## Integration Overview
 
-This section provides a simplified, high-level overview of the integration flow. For detailed implementation guidance or custom setups, please contact us.
+This section provides a simplified, high-level overview of the integration flow. For additional implementation guidance or custom setups, please contact us.
 
 * **Register**: Create an account and generate an API key at [https://app.stakely.io/staking-api](https://app.stakely.io/staking-api).
 
