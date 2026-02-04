@@ -29,7 +29,7 @@ function Home() {
             <div className="container">
               <div className="row cards__container">
                 <Card
-                  to="staking-api/what-is-staking"
+                  to="staking-api/introduction"
                   header={{
                     label:"Staking API"
                   }}

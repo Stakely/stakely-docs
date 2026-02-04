@@ -90,7 +90,7 @@ const config = {
         },
         items: [
           {
-            to: "staking-api/what-is-staking",
+            to: "staking-api/introduction",
             label: "Staking API",
             position: "left",
             activeBasePath: 'staking-api/',
