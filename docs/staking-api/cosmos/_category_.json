@@ -2,7 +2,6 @@
   "label": "Cosmos",
   "link": {
     "type": "doc",
-    "id": "cosmos/index",
-    "description": "Stakely Staking API Cosmos Hub documentation"
+    "id": "cosmos/index"
   }
 }
