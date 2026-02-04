@@ -1,7 +1,8 @@
 {
   "label": "Cosmos",
   "link": {
-    "type": "generated-index",
-    "description": "Staking API Cosmos Hub documentation"
+    "type": "doc",
+    "id": "cosmos/index",
+    "description": "Stakely Staking API Cosmos Hub documentation"
   }
 }
