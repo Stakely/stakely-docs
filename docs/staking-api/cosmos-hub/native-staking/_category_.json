@@ -1,6 +1,6 @@
 {
   "label": "Native Staking",
-  "position":4,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Cosmos Hub Native Staking Module"

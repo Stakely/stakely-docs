@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 import StakingOpenApiLink from '@site/src/components/StakingOpenApiLink';
@@ -45,8 +45,7 @@ Need support for another network? Reach out at [admin@stakely.io](mailto:admin@s
 
 If you are unsure which Cosmos networks are enabled for your account you can ask the API directly.
 
-- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmoshub/get/apiv1cosmoshubnativenetworks)
-
+- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmoshub/GET/api/v1/cosmoshub/native/networks)
 Each object in the response includes:
 
 | Field | Description |
@@ -62,7 +61,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionstake)
+- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/stake)
 
 #### Description
 
@@ -82,7 +81,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionunstake)
+- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/unstake)
 
 #### Description
 
@@ -102,7 +101,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionclaimrewards)
+- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/claim-rewards)
 
 #### Description
 
@@ -122,7 +121,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionprepare)
+- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/prepare)
 
 #### Description
 
@@ -142,7 +141,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmoshub/post/apiv1cosmoshubnativeactionbroadcast)
+- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/broadcast)
 
 #### Description
 

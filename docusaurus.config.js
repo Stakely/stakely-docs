@@ -90,7 +90,7 @@ const config = {
         },
         items: [
           {
-            to: "staking-api/what-is-staking",
+            to: "staking-api/introduction",
             label: "Staking API",
             position: "left",
             activeBasePath: 'staking-api/',
@@ -119,8 +119,8 @@ const config = {
             label: 'Stakely Home',
           },
           {
-            href: 'https://github.com/Stakely/',
-            label: 'GitHub',
+            href: 'https://github.com/Stakely/stakely-docs',
+            label: 'Contribute',
             position: 'right',
           },
         ],
@@ -142,6 +142,10 @@ const config = {
                 label: 'Security',
                 href: 'https://security.stakely.io/',
               },
+              {
+                href: 'https://github.com/Stakely',
+                label: 'GitHub',
+              }
             ]
           },
           {
