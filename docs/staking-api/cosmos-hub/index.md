@@ -1,6 +1,5 @@
 ---
 title: Cosmos Hub
-sidebar_position: 4
 ---
 
 # Cosmos Hub

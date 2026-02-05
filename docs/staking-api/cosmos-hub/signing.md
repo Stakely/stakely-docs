@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+title: Signing
 ---
 
 # How to sign transactions
@@ -31,7 +32,6 @@ COSMOS_WALLET_SEED=
 COSMOS_WALLET_PRIVATE_KEY=
 COSMOS_RPC=
 COSMOS_WALLET_ADDRESS=
-
 ```
 
 ```javascript
