@@ -19,5 +19,5 @@ This section covers Cosmos Hub staking integrations using the Stakely Staking AP
 
 ## Notes
 
-- Cosmos integrations require specifying the correct `chain_id` for the target network. The API provides a dedicated endpoint to list all available Cosmos networks and their corresponding `chain_id` values.
+- Cosmos integrations require specifying the correct `X-NETWORK` for the target network. The API provides a dedicated endpoint to list all available Cosmos networks and their corresponding `X-NETWORK` values.
 - All staking operations are executed on-chain. Stakely prepares the transaction payloads, while signing is performed by your application using your preferred signing method.

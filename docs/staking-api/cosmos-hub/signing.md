@@ -26,7 +26,6 @@ This method is typically used in backend services, scripts, or environments wher
 
 
 Complete with your own wallet private key or seed at `.env`
-
 ```
 COSMOS_WALLET_SEED=
 COSMOS_WALLET_PRIVATE_KEY=
