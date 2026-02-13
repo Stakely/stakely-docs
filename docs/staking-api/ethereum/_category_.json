@@ -1,7 +1,8 @@
 {
   "label": "Ethereum",
+  "position": 4,
   "link": {
-    "type": "generated-index",
-    "description": "Staking API Ethereum documentation."
+    "type": "doc",
+    "id": "staking-api/ethereum/index"
   }
 }

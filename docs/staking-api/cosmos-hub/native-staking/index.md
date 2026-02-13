@@ -27,7 +27,7 @@ Rewards generated from staking are not automatically added to your wallet; they 
     3. Reinvestment or Transfer: After claiming, rewards can be reinvested by staking them with a validator or used for other transactions.
 
 
-# Staking API Diagram
+## Staking API Diagram
 
 ```mermaid
 sequenceDiagram
