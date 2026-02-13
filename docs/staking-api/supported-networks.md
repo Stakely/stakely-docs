@@ -19,5 +19,6 @@ If you are interested in integrating a network that is not supported, please con
 | Ethereum        |       ✅     |         StakeWise     |   Mainnet, Hoodi  |
 | Monad           |       ✅     |           Native      |  Mainnet, Testnet |
 | Solana          |       ✅     |           Native      |  Mainnet, Testnet |
+| Stablecoins     |  Contact Us  |           DeFi       |  Mainnet, Testnet |
 
 The API also exposes endpoints to programmatically discover available networks per blockchain. These are covered in detail in later sections of the documentation.
