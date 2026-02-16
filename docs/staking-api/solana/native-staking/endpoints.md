@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 import StakingOpenApiLink from '@site/src/components/StakingOpenApiLink';
@@ -45,7 +45,7 @@ Currently supported values: `mainnet-beta` and `devnet`. Contact [admin@stakely.
 
 Need to know which Solana clusters are enabled for your API key? Ask the API directly.
 
-- Endpoint: [`/api/v1/solana/native/networks`](/staking-api/api-reference#tag/solana/get/apiv1solananativenetworks)
+- Endpoint: [`/api/v1/solana/native/networks`](/staking-api/api-reference#tag/solana/get/api/v1/solana/native/networks)
 
 Each item in the response includes:
 
@@ -62,7 +62,7 @@ ____
 
 Craft a create nonce account transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/create-nonce-account`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactioncreatenonceaccount)
+- Endpoint: [`/api/v1/solana/native/action/create-nonce-account`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/create-nonce-account)
 
 #### Description
 
@@ -83,7 +83,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/stake`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionstake)
+- Endpoint: [`/api/v1/solana/native/action/stake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/stake)
 
 #### Description
 
@@ -105,7 +105,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/unstake`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionunstake)
+- Endpoint: [`/api/v1/solana/native/action/unstake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/unstake)
 
 #### Description
 
@@ -127,7 +127,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/withdraw`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionwithdraw)
+- Endpoint: [`/api/v1/solana/native/action/withdraw`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/withdraw)
 
 #### Description
 
@@ -152,7 +152,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/solana/native/action/prepare`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionprepare)
+- Endpoint: [`/api/v1/solana/native/action/prepare`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/prepare)
 
 #### Description
 
@@ -172,7 +172,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/solana/native/action/broadcast`](/staking-api/api-reference#tag/solana/post/apiv1solananativeactionbroadcast)
+- Endpoint: [`/api/v1/solana/native/action/broadcast`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/broadcast)
 
 #### Description
 

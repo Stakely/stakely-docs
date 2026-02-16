@@ -51,7 +51,7 @@ Need another Monad environment exposed? Let us know at [admin@stakely.io](mailto
 
 Use this helper endpoint to obtain the list of Monad staking networks that are currently enabled for your API key.
 
-- Endpoint: [`/api/v1/monad/native/networks`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativenetworks)
+- Endpoint: [`/api/v1/monad/native/networks`](/staking-api/api-reference#tag/ethereummonad/get/api/v1/monad/native/networks)
 
 Response payload fields:
 
@@ -68,7 +68,7 @@ ____
 
 Craft a delegate transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/delegate`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactiondelegate)
+- Endpoint: [`/api/v1/monad/native/action/delegate`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/delegate)
 
 #### Description
 
@@ -88,7 +88,7 @@ ____
 
 Craft an undelegate transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/undelegate`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionundelegate)
+- Endpoint: [`/api/v1/monad/native/action/undelegate`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/undelegate)
 
 #### Description
 
@@ -108,7 +108,7 @@ ____
 
 Craft a withdraw transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/withdraw`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionwithdraw)
+- Endpoint: [`/api/v1/monad/native/action/withdraw`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/withdraw)
 
 #### Description
 
@@ -128,7 +128,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/claim-rewards`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionclaimrewards)
+- Endpoint: [`/api/v1/monad/native/action/claim-rewards`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/claim-rewards)
 
 #### Description
 
@@ -148,7 +148,7 @@ ____
 
 Craft a compound rewards transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/compound`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactioncompound)
+- Endpoint: [`/api/v1/monad/native/action/compound`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/compound)
 
 #### Description
 
@@ -168,7 +168,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/monad/native/action/prepare`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionprepare)
+- Endpoint: [`/api/v1/monad/native/action/prepare`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/prepare)
 
 #### Description
 
@@ -188,7 +188,7 @@ ____
 
 Broadcast a signed transaction:
 
-- Endpoint: [`/api/v1/monad/native/action/broadcast`](/staking-api/api-reference#tag/ethereummonad/post/apiv1monadnativeactionbroadcast)
+- Endpoint: [`/api/v1/monad/native/action/broadcast`](/staking-api/api-reference#tag/ethereummonad/post/api/v1/monad/native/action/broadcast)
 
 #### Description
 
@@ -208,7 +208,7 @@ ____
 
 Get stake balance for the given address:
 
-- Endpoint: [`/api/v1/monad/native/stake-balance/{address}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativestakebalanceaddress)
+- Endpoint: [`/api/v1/monad/native/stake-balance/{address}`](/staking-api/api-reference#tag/ethereummonad/get/api/v1/monad/native/stake-balance/{address})
 
 #### Description
 
@@ -228,7 +228,7 @@ ____
 
 Get withdrawal requests for the given address:
 
-- Endpoint: [`/api/v1/monad/native/withdrawals/{address}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativewithdrawalsaddress)
+- Endpoint: [`/api/v1/monad/native/withdrawals/{address}`](/staking-api/api-reference#tag/ethereummonad/get/api/v1/monad/native/withdrawals/{address})
 
 #### Description
 
@@ -255,7 +255,7 @@ ____
 
 Get a single withdrawal request:
 
-- Endpoint: [`/api/v1/monad/native/withdrawal/{address}/{withdrawId}`](/staking-api/api-reference#tag/ethereummonad/get/apiv1monadnativewithdrawaladdresswithdrawid)
+- Endpoint: [`/api/v1/monad/native/withdrawal/{address}/{withdrawId}`](/staking-api/api-reference#tag/ethereummonad/get/api/v1/monad/native/withdrawal/{address}/{withdrawId})
 
 #### Description
 
