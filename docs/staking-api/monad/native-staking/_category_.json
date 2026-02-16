@@ -1,0 +1,8 @@
+{
+  "label": "Native Staking",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "staking-api/monad/native-staking/index"
+  }
+}
