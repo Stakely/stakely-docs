@@ -1,8 +1,8 @@
 {
   "label": "Native Staking",
-  "position":4,
+  "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "Solana Native Staking Module"
+    "type": "doc",
+    "id": "staking-api/solana/native-staking/index"
   }
 }

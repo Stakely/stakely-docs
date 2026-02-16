@@ -1,7 +1,8 @@
 {
   "label": "Solana",
+  "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Staking API Solana documentation"
+    "type": "doc",
+    "id": "staking-api/solana/index"
   }
 }
