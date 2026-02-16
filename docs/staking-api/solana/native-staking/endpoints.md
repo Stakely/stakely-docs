@@ -14,7 +14,7 @@ Once you already have access to the Staking API with a validated user and existi
 :::tip
 
 You can check the **Staking API Reference** here:
-- Rendered [doc page](/staking-api/api-reference).
+- Rendered <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">doc page</a>.
 - <StakingOpenApiLink />
 :::
 
@@ -45,7 +45,7 @@ Currently supported values: `mainnet-beta` and `devnet`. Contact [admin@stakely.
 
 Need to know which Solana clusters are enabled for your API key? Ask the API directly.
 
-- Endpoint: [`/api/v1/solana/native/networks`](/staking-api/api-reference#tag/solana/get/api/v1/solana/native/networks)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/get/api/v1/solana/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/networks</code></a>
 
 Each item in the response includes:
 
@@ -62,7 +62,7 @@ ____
 
 Craft a create nonce account transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/create-nonce-account`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/create-nonce-account)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/create-nonce-account" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/create-nonce-account</code></a>
 
 #### Description
 
@@ -70,11 +70,11 @@ This endpoint will craft a create nonce account transaction ready to be signed. 
 
 #### Request body parameters
 
-[`CreateNonceAccountActionDto`](/staking-api/api-reference#model/createnonceaccountactiondto)
+<a href="/staking-api/api-reference#model/createnonceaccountactiondto" target="_blank" rel="noopener noreferrer"><code>CreateNonceAccountActionDto</code></a>
 
 #### Returned
 
-[`SolanaStakingActionResponseDto`](/staking-api/api-reference#model/solanastakingactionresponsedto)
+<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -83,7 +83,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/stake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/stake)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/stake</code></a>
 
 #### Description
 
@@ -93,11 +93,11 @@ The stake action combines these steps into a single transaction, simplifying the
 
 #### Request body parameters
 
-[`SolanaStakeActionDto`](/staking-api/api-reference#model/solanastakeactiondto)
+<a href="/staking-api/api-reference#model/solanastakeactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaStakeActionDto</code></a>
 
 #### Returned
 
-[`SolanaStakingActionResponseDto`](/staking-api/api-reference#model/solanastakingactionresponsedto)
+<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -105,7 +105,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/unstake`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/unstake)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/unstake</code></a>
 
 #### Description
 
@@ -115,11 +115,11 @@ The unstake action through the Staking API initiates this process by creating a 
 
 #### Request body parameters
 
-[`SolanaUnstakeActionDto`](/staking-api/api-reference#model/solanaunstakeactiondto)
+<a href="/staking-api/api-reference#model/solanaunstakeactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaUnstakeActionDto</code></a>
 
 #### Returned
 
-[`SolanaStakingActionResponseDto`](/staking-api/api-reference#model/solanastakingactionresponsedto)
+<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -127,7 +127,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/solana/native/action/withdraw`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/withdraw)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/withdraw" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/withdraw</code></a>
 
 #### Description
 
@@ -140,11 +140,11 @@ The withdraw action through the Staking API creates a transaction that performs 
 
 #### Request body parameters
 
-[`SolanaWithdrawActionDto`](/staking-api/api-reference#model/solanawithdrawactiondto)
+<a href="/staking-api/api-reference#model/solanawithdrawactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaWithdrawActionDto</code></a>
 
 #### Returned
 
-[`SolanaStakingActionResponseDto`](/staking-api/api-reference#model/solanastakingactionresponsedto)
+<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -152,7 +152,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/solana/native/action/prepare`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/prepare)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/prepare</code></a>
 
 #### Description
 
@@ -160,11 +160,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-[`SolanaPrepareActionDto`](/staking-api/api-reference#model/solanaprepareactiondto)
+<a href="/staking-api/api-reference#model/solanaprepareactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionDto</code></a>
 
 #### Returned
 
-[`SolanaPrepareActionResponseDto`](/staking-api/api-reference#model/solanaprepareactionresponsedto)
+<a href="/staking-api/api-reference#model/solanaprepareactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionResponseDto</code></a>
 
 ____
 
@@ -172,7 +172,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/solana/native/action/broadcast`](/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/broadcast)
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/broadcast</code></a>
 
 #### Description
 
@@ -180,8 +180,8 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-[`SolanaBroadcastActionDto`](/staking-api/api-reference#model/solanabroadcastactiondto)
+<a href="/staking-api/api-reference#model/solanabroadcastactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionDto</code></a>
 
 #### Returned
 
-[`SolanaBroadcastActionResponseDto`](/staking-api/api-reference#model/solanabroadcastactionresponsedto)
+<a href="/staking-api/api-reference#model/solanabroadcastactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionResponseDto</code></a>

@@ -14,7 +14,7 @@ Once you already have access to the Staking API with a validated user and existi
 :::tip
 
 You can check the **Staking API Reference** here:
-- Rendered [doc page](/staking-api/api-reference).
+- Rendered <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">doc page</a>.
 - <StakingOpenApiLink />
 :::
 
@@ -52,7 +52,7 @@ When omitted the API falls back to the default Stakewise network configured for 
 
 Use this helper endpoint to discover which Stakewise networks are currently enabled for your API key.
 
-- Endpoint: [`/api/v1/ethereum/stakewise/networks`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/networks)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/networks</code></a>
 
 Response payload fields:
 

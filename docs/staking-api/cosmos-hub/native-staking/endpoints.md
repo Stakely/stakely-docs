@@ -14,7 +14,7 @@ Once you already have access to the Staking API with a validated user and existi
 :::tip
 
 You can check the **Staking API Reference** here:
-- Rendered [doc page](/staking-api/api-reference).
+- Rendered <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">doc page</a>.
 - <StakingOpenApiLink />
 :::
 
@@ -45,7 +45,7 @@ Need support for another network? Reach out at [admin@stakely.io](mailto:admin@s
 
 If you are unsure which Cosmos networks are enabled for your account you can ask the API directly.
 
-- Endpoint: [`/api/v1/cosmos/native/networks`](/staking-api/api-reference#tag/cosmoshub/GET/api/v1/cosmos/native/networks)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/GET/api/v1/cosmos/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/networks</code></a>
 Each object in the response includes:
 
 | Field | Description |
@@ -61,7 +61,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/stake`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/stake)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/stake</code></a>
 
 #### Description
 
@@ -69,11 +69,11 @@ This endpoint will craft a stake transaction ready to be signed.
 
 #### Request body parameters
 
-[`StakeActionDto`](/staking-api/api-reference#model/stakeactiondto)
+<a href="/staking-api/api-reference#model/stakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakeActionDto</code></a>
 
 #### Returned
 
-[`StakingActionResponseDto`](/staking-api/api-reference#model/stakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -81,7 +81,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/unstake`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/unstake)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/unstake</code></a>
 
 #### Description
 
@@ -89,11 +89,11 @@ This endpoint will craft an unstake transaction ready to be signed.
 
 #### Request body parameters
 
-[`UnstakeActionDto`](/staking-api/api-reference#model/unstakeactiondto)
+<a href="/staking-api/api-reference#model/unstakeactiondto" target="_blank" rel="noopener noreferrer"><code>UnstakeActionDto</code></a>
 
 #### Returned
 
-[`StakingActionResponseDto`](/staking-api/api-reference#model/stakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -101,7 +101,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: [`/api/v1/cosmos/native/action/claim-rewards`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/claim-rewards)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/claim-rewards" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/claim-rewards</code></a>
 
 #### Description
 
@@ -109,11 +109,11 @@ This endpoint will craft a claim rewards transaction ready to be signed.
 
 #### Request body parameters
 
-[`ClaimRewardsActionDto`](/staking-api/api-reference#model/claimrewardsactiondto)
+<a href="/staking-api/api-reference#model/claimrewardsactiondto" target="_blank" rel="noopener noreferrer"><code>ClaimRewardsActionDto</code></a>
 
 #### Returned
 
-[`StakingActionResponseDto`](/staking-api/api-reference#model/stakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -121,7 +121,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/cosmos/native/action/prepare`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/prepare)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/prepare</code></a>
 
 #### Description
 
@@ -129,11 +129,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-[`PrepareActionDto`](/staking-api/api-reference#model/prepareactiondto)
+<a href="/staking-api/api-reference#model/prepareactiondto" target="_blank" rel="noopener noreferrer"><code>PrepareActionDto</code></a>
 
 #### Returned
 
-[`PrepareActionResponseDto`](/staking-api/api-reference#model/preparectionresponsedto)
+<a href="/staking-api/api-reference#model/preparectionresponsedto" target="_blank" rel="noopener noreferrer"><code>PrepareActionResponseDto</code></a>
 
 ____
 
@@ -141,7 +141,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/cosmos/native/action/broadcast`](/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/broadcast)
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/broadcast</code></a>
 
 #### Description
 
@@ -149,8 +149,8 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-[`BroadcastActionDto`](/staking-api/api-reference#model/brodacastactiondto)
+<a href="/staking-api/api-reference#model/brodacastactiondto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionDto</code></a>
 
 #### Returned
 
-[`BroadcastActionResponseDto`](/staking-api/api-reference#model/broadcastctionresponsedto)
+<a href="/staking-api/api-reference#model/broadcastctionresponsedto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionResponseDto</code></a>
