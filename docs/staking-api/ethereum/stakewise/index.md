@@ -34,6 +34,7 @@ After unstaking has processed and the ETH is available in the Vault, a separate 
 2. **Withdraw Funds**: Use the `withdraw` method to transfer the available ETH back into your wallet.
 3. **Post-Withdrawal**: The withdrawn ETH can be used freely on-chain or restaked as desired.
 
+___
 
 ## Staking API Diagram
 

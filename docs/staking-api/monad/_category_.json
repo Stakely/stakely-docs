@@ -1,8 +1,9 @@
 {
   "label": "Monad",
+  "position": 7,
   "link": {
-    "type": "generated-index",
-    "description": "Staking API Monad documentation."
+    "type": "doc",
+    "id": "staking-api/monad/index"
   }
 }
 
