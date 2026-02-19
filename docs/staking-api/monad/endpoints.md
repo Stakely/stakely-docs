@@ -13,7 +13,7 @@ Once you already have access to the Staking API with a validated user and existi
 :::tip
 
 You can check the **Staking API Reference** here:
-- Rendered <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">doc page</a>.
+- Rendered [doc page](/staking-api/api-reference).
 - <StakingOpenApiLink />
 :::
 
@@ -51,7 +51,7 @@ Need another Monad environment exposed? Let us know at [admin@stakely.io](mailto
 
 Use this helper endpoint to obtain the list of Monad staking networks that are currently enabled for your API key.
 
- - Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/networks</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/networks</code></a>
 
 Response payload fields:
 
@@ -76,11 +76,11 @@ This endpoint will craft a delegate transaction ready to be signed. The transact
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/monadstakeactiondto" target="_blank" rel="noopener noreferrer"><code>MonadStakeActionDto</code></a>
+[`MonadStakeActionDto`](/staking-api/api-reference#model/monadstakeactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/monadactionresponsedto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+[`MonadActionResponseDto`](/staking-api/api-reference#model/monadactionresponsedto)
 
 ____
 
@@ -96,11 +96,11 @@ This endpoint will craft an undelegate transaction ready to be signed. The undel
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/monadundelegateactiondto" target="_blank" rel="noopener noreferrer"><code>MonadUndelegateActionDto</code></a>
+[`MonadUndelegateActionDto`](/staking-api/api-reference#model/monadundelegateactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/monadactionresponsedto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+[`MonadActionResponseDto`](/staking-api/api-reference#model/monadactionresponsedto)
 
 ____
 
@@ -116,11 +116,11 @@ Once the withdrawal is available (after the withdrawal epoch), you can claim it.
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/monadwithdrawactiondto" target="_blank" rel="noopener noreferrer"><code>MonadWithdrawActionDto</code></a>
+[`MonadWithdrawActionDto`](/staking-api/api-reference#model/monadwithdrawactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/monadactionresponsedto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+[`MonadActionResponseDto`](/staking-api/api-reference#model/monadactionresponsedto)
 
 ____
 
@@ -136,11 +136,11 @@ This endpoint will craft a claim rewards transaction ready to be signed. It allo
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/monadclaimrewardsactiondto" target="_blank" rel="noopener noreferrer"><code>MonadClaimRewardsActionDto</code></a>
+[`MonadClaimRewardsActionDto`](/staking-api/api-reference#model/monadclaimrewardsactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/monadactionresponsedto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+[`MonadActionResponseDto`](/staking-api/api-reference#model/monadactionresponsedto)
 
 ____
 
@@ -156,11 +156,11 @@ This endpoint will craft a compound rewards transaction ready to be signed. It a
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/monadcompoundactiondto" target="_blank" rel="noopener noreferrer"><code>MonadCompoundActionDto</code></a>
+[`MonadCompoundActionDto`](/staking-api/api-reference#model/monadcompoundactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/monadactionresponsedto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+[`MonadActionResponseDto`](/staking-api/api-reference#model/monadactionresponsedto)
 
 ____
 
@@ -176,11 +176,11 @@ Prepare a signed transaction by gathering the provided signatures (r, s, v) with
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/ethprepareactiondto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionDto</code></a>
+[`EthPrepareActionDto`](/staking-api/api-reference#model/ethprepareactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/ethprepareactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionResponseDto</code></a>
+[`EthPrepareActionResponseDto`](/staking-api/api-reference#model/ethprepareactionresponsedto)
 
 ____
 
@@ -196,11 +196,11 @@ Broadcast a signed transaction. Usually you will broadcast the signed transactio
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/ethbroadcastactiondto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionDto</code></a>
+[`EthBroadcastActionDto`](/staking-api/api-reference#model/ethbroadcastactiondto)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/ethbroadcastactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionResponseDto</code></a>
+[`EthBroadcastActionResponseDto`](/staking-api/api-reference#model/ethbroadcastactionresponsedto)
 
 ____
 
@@ -220,7 +220,7 @@ At url param you will need to pass the `address` you want to retrieve stake bala
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/getstakebalanceresponsedto" target="_blank" rel="noopener noreferrer"><code>GetStakeBalanceResponseDto</code></a>
+[`GetStakeBalanceResponseDto`](/staking-api/api-reference#model/getstakebalanceresponsedto)
 
 ____
 
@@ -240,14 +240,14 @@ At url param you will need to pass the `address` you want to retrieve withdrawal
 
 #### Query parameters
 
-<a href="/staking-api/api-reference#model/monadwithdrawalquerydto" target="_blank" rel="noopener noreferrer"><code>MonadWithdrawalQueryDto</code></a>
+[`MonadWithdrawalQueryDto`](/staking-api/api-reference#model/monadwithdrawalquerydto)
 
 - `startWithdrawId` (optional): Start withdrawal ID in the range (0-255, defaults to 0)
 - `endWithdrawId` (optional): End withdrawal ID in the range (0-255, defaults to 255)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/getwithdrawalrequestsresponsedto" target="_blank" rel="noopener noreferrer"><code>GetWithdrawalRequestsResponseDto</code></a>
+[`GetWithdrawalRequestsResponseDto`](/staking-api/api-reference#model/getwithdrawalrequestsresponsedto)
 
 ____
 
@@ -263,14 +263,14 @@ Get a single withdrawal request for the given delegator address and withdrawal s
 
 #### Request parameters
 
-<a href="/staking-api/api-reference#model/monadwithdrawalparamsdto" target="_blank" rel="noopener noreferrer"><code>MonadWithdrawalParamsDto</code></a>
+[`MonadWithdrawalParamsDto`](/staking-api/api-reference#model/monadwithdrawalparamsdto)
 
 - `address`: Delegator address
 - `withdrawId`: Withdrawal slot identifier (0-255)
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/getwithdrawalrequestresponsedto" target="_blank" rel="noopener noreferrer"><code>GetWithdrawalRequestResponseDto</code></a>
+[`GetWithdrawalRequestResponseDto`](/staking-api/api-reference#model/getwithdrawalrequestresponsedto)
 
 ____
 

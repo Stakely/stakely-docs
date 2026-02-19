@@ -45,7 +45,7 @@ Currently supported values: `mainnet-beta` and `devnet`. Contact [admin@stakely.
 
 Need to know which Solana clusters are enabled for your API key? Ask the API directly.
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/get/api/v1/solana/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/networks</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/GET/api/v1/solana/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/networks</code></a>
 
 Each item in the response includes:
 
@@ -62,7 +62,7 @@ ____
 
 Craft a create nonce account transaction:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/create-nonce-account" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/create-nonce-account</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/create-nonce-account" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/create-nonce-account</code></a>
 
 #### Description
 
@@ -83,7 +83,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/stake</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/stake</code></a>
 
 #### Description
 
@@ -105,7 +105,7 @@ ____
 
 Craft an unstake transaction:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/unstake</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/unstake</code></a>
 
 #### Description
 
@@ -127,7 +127,7 @@ ____
 
 Craft a claim rewards transaction:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/withdraw" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/withdraw</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/withdraw" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/withdraw</code></a>
 
 #### Description
 
@@ -152,7 +152,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/prepare</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/prepare</code></a>
 
 #### Description
 
@@ -172,7 +172,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: <a href="/staking-api/api-reference#tag/solana/post/api/v1/solana/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/broadcast</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/solana/POST/api/v1/solana/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/solana/native/action/broadcast</code></a>
 
 #### Description
 

@@ -12,10 +12,9 @@ The signing concepts and examples described in this section apply to all Monad s
 
 Below are common signing approaches supported by EVM-compatible tooling.
 
-
 ## Signing with a private key
 
-### Signing with Web3.js or Ethers.js
+### Signing with Ethers JS using a Private Key:
 
 Monad is EVM-compatible, so standard Ethereum tooling can be used for transaction signing.
 
@@ -23,6 +22,7 @@ The crafted transaction payload returned by the API is passed to the signer usin
 
 This method is typically used in backend services, scripts, or environments where private keys are managed directly by the application.
 
+It involves the use of the Ethers JavaScript library, which allows developers to interact with the Ethereum virtual machine directly from a JavaScript application. To sign a transaction, a developer typically imports the SDK, creates a transaction object, and then uses a private key to sign this object. This signing process is crucial as it verifies the identity of the transaction initiator and ensures the transaction cannot be altered without the initiator's consent.
 
 Complete with your own wallet private key or seed at `.env`
 
@@ -35,7 +35,6 @@ EVM_CHAIN_ID=
 
 ```javascript
 const { Common, Chain, Hardfork } = require('@ethereumjs/common')
-const { Web3 } = require('web3');
 const Transaction  = require('@ethereumjs/tx');
 const { RLP } = require('@ethereumjs/rlp');
 
@@ -51,11 +50,10 @@ const accountFrom = {
   chainId: process.env.EVM_CHAIN_ID
 };
 
-const web3 = new Web3(ETHEREUM_RPC);
 const common = new Common({ chain: accountFrom.chainId })
 
 const signUnsignedTxWithPk = async ({serialized_tx_hex, raw_tx_hex_hash}) => {
-  const serializedTxBytes = await web3.utils.hexToBytes(serialized_tx_hex);
+  const serializedTxBytes = ethers.getBytes(serialized_tx_hex);
   const rawTxHexHashWithoutPrefix = raw_tx_hex_hash.substring(2);
 
   const txObject  = Transaction.TransactionFactory.fromSerializedData(serializedTxBytes, { common });

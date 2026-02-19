@@ -52,7 +52,7 @@ When omitted the API falls back to the default Stakewise network configured for 
 
 Use this helper endpoint to discover which Stakewise networks are currently enabled for your API key.
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/networks</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/networks</code></a>
 
 Response payload fields:
 
@@ -68,7 +68,7 @@ ____
 
 Craft a stake transaction:
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/stake​`](/staking-api/api-reference#tag/ethereumstakewise/post/api/v1/ethereum/stakewise/action/stake)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/POST/api/v1/ethereum/stakewise/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/action/stake</code></a>
 
 #### Description
 
@@ -88,7 +88,7 @@ ____
 
 Craft a unstake transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/unstake​`](/staking-api/api-reference#tag/ethereumstakewise/post/api/v1/ethereum/stakewise/action/unstake)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/POST/api/v1/ethereum/stakewise/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/action/unstake</code></a>
 
 #### Description
 
@@ -108,7 +108,7 @@ ____
 
 Craft a withdraw transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/withdraw`](/staking-api/api-reference#tag/ethereumstakewise/post/api/v1/ethereum/stakewise/action/withdraw)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/POST/api/v1/ethereum/stakewise/action/withdraw" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/action/withdraw</code></a>
 
 #### Description
 
@@ -127,7 +127,7 @@ ____
 
 Gathers signature and unsigned tx:
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/prepare`](/staking-api/api-reference#tag/ethereumstakewise/post/api/v1/ethereum/stakewise/action/prepare)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/POST/api/v1/ethereum/stakewise/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/action/prepare</code></a>
 
 #### Description
 
@@ -147,7 +147,7 @@ ____
 
 Broadcast a signed transaction
 
-- Endpoint: [`/api/v1/ethereum/stakewise/action/broadcast`](/staking-api/api-reference#tag/ethereumstakewise/post/api/v1/ethereum/stakewise/action/broadcast)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/POST/api/v1/ethereum/stakewise/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/action/broadcast</code></a>
 
 #### Description
 
@@ -168,7 +168,7 @@ ____
 Get stakewise actions history for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/historic/{address}​`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/historic/{address})
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/historic/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/historic/{address}</code></a>
 
 #### Description
 
@@ -189,7 +189,7 @@ ____
 Get stakewise stake balance for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/stake-balance/{address}​`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/stake-balance/{address})
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stake-balance/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stake-balance/{address}</code></a>
 
 #### Description
 
@@ -211,7 +211,7 @@ ____
 Get stakewise exited balance for the given address
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/exited-balance/{address}​​`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/exited-balance/{address})
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/exited-balance/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/exited-balance/{address}</code></a>
 
 #### Description
 
@@ -233,7 +233,7 @@ ____
 Get stakewise vault info such as APY and balance for the current time
 
 
-- Endpoint: [`/api/v1/ethereum/stakewise/vault​​`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/vault)
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/vault" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/vault</code></a>
 
 #### Description
 
@@ -250,7 +250,7 @@ ____
 
 Get user stats for stakewise vault for N days
 
-- Endpoint: [`/api/v1/ethereum/stakewise/stats/{address}`](/staking-api/api-reference#tag/ethereumstakewise/get/api/v1/ethereum/stakewise/stats/{address})
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stats/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stats/{address}</code></a>
 
 #### Description
 
