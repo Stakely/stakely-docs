@@ -3,9 +3,18 @@ sidebar_position: 1
 ---
 # Staking Flow
 
-### Create nonce account
+Before interacting with the API methods, it is useful to understand how staking works conceptually on Solana.
 
-Creating a nonce account is an important step in the Solana staking process, especially for durable transactions. Here's an overview of the nonce account creation action:
+Staking on Solana is account-based. To stake SOL, a dedicated **stake account** is created and delegated to a validator. The stake account holds the delegated SOL and tracks its activation state, rewards, and eventual deactivation.
+
+In most standard integrations, transactions are signed and sent to the network immediately after being created. In these cases, a recent blockhash is sufficient and no additional configuration is required.
+
+However, if a transaction is not going to be signed and broadcast shortly after being created, for example in multisig setups or flows requiring manual approval, a **durable nonce account** must be used. Durable nonce accounts prevent transaction expiration caused by Solana’s short blockhash validity window.
+
+If your integration signs and broadcasts transactions within seconds or a few minutes, the nonce account section can be safely ignored.
+
+
+### Create nonce account (optional)
 
 1. **Initialize Nonce Account**: A new nonce account is created and initialized with a unique nonce value.
 
@@ -31,7 +40,7 @@ The Staking API can help you create and manage nonce accounts, simplifying the p
 :::info
 For more detailed information about durable nonces in Solana, you can refer to the following resources:
 
-- [Solana Official Documentation on Durable Nonces](https://solana.com/es/developers/courses/offline-transactions/durable-nonces#summary): This resource provides a comprehensive overview of durable nonces, including their purpose, how they work, and their advantages in creating offline transactions.
+- [Solana Official Documentation on Durable Nonces](https://solana.com/developers/courses/offline-transactions/durable-nonces#summary): This resource provides a comprehensive overview of durable nonces, including their purpose, how they work, and their advantages in creating offline transactions.
 
 - [Solana Cookbook: Durable Nonces](https://solanacookbook.com/references/offline-transactions.html#durable-nonce): This guide offers practical examples and explanations on how to use durable nonces in Solana transactions, making it a valuable reference for developers implementing this feature.
 
@@ -104,8 +113,50 @@ Remember that you can only withdraw funds that have been fully deactivated. If y
 
 ___
 
-### Extra information
+## Staking API Diagram
 
 :::info
-You can have a look to [Protocol-staking-Solana](https://learn.protocolstaking.info/detailed-explainers/staking-mechanism/solana) **detailed information** .
+The first action "Create nonce account" is not mandatory for the staking flow. However, it is highly recommended to create and use a nonce account for subsequent steps. Using a nonce account allows transactions to be durable over time and not expire, which is particularly beneficial for complex operations like staking.
 :::
+
+```mermaid
+sequenceDiagram
+autonumber
+actor User
+participant Staking API
+User->>+Staking API: Create nonce account action
+Note left of User: Offline: Create a nonce account
+Note right of Staking API: 🔨 Create nonce account action crafting
+Staking API-->>-User: Create nonce account action return
+activate User
+User->>+Staking API: Stake action
+Note left of User: Offline: Stake 1 SOL
+Note right of Staking API: 🔨 Stake action crafting
+Staking API-->>-User: Stake action return
+activate User
+rect rgb(255,178,216)
+Note left of User: 📝 Sign unsigned transaction:
+Note left of User:  a) Locally with private key 🔑
+Note left of User:  b) Custodian 🏦
+end
+deactivate User
+
+User->>+Staking API: Prepare
+Note right of Staking API: 🔏  Adds signature to tx
+Staking API-->>-User: Returns signed transaction
+activate User
+rect rgba(228, 173, 77, 0.8)
+Note left of User: With the signed transaction you can:
+Note left of User: Broadcast it by yourself using any RPC
+Note left of User: Send it to the broadcast endpoint
+end
+deactivate User
+User->>+Staking API: Broadcast
+Note right of Staking API: 📡  Broadcast to the network
+Staking API-->>-User: Returns broadcasted transaction status
+activate User
+rect rgba(50, 156, 0, 0.8)
+Note left of User:  If success, transaction is already onchain! 🚀
+end
+deactivate User
+```

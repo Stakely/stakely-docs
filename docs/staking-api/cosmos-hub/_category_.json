@@ -1,6 +1,6 @@
 {
   "label": "Cosmos Hub",
-  "position": 4,
+  "position": 6,
   "link": {
     "type": "doc",
     "id": "staking-api/cosmos-hub/index"
