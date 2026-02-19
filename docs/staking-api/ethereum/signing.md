@@ -16,7 +16,7 @@ Below are common signing approaches supported by Ethereum tooling.
 
 ### Signing with Ethers JS using a Private Key:
 
-This approach uses Ethereum JavaScript libraries such as Web3.js to sign transactions locally with a private key.
+This approach uses Ethereum JavaScript libraries to sign transactions locally with a private key.
 
 The crafted transaction payload returned by the API is passed to the signer, which produces a valid Ethereum signature. The resulting signed transaction can then be broadcast to the network.
 

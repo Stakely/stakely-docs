@@ -208,7 +208,7 @@ ____
 
 Get stake balance for the given address:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/stake-balance/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/stake-balance/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/stake-balance/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/stake-balance/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -228,7 +228,7 @@ ____
 
 Get withdrawal requests for the given address:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/withdrawals/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/withdrawals/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/withdrawals/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/withdrawals/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -255,7 +255,7 @@ ____
 
 Get a single withdrawal request:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/withdrawal/{address}/{withdrawId}" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/withdrawal/{address}/{withdrawId}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/GET/api/v1/monad/native/withdrawal/&#123;address&#125;/&#123;withdrawId&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/withdrawal/&#123;address&#125;/&#123;withdrawId&#125;</code></a>
 
 #### Description
 

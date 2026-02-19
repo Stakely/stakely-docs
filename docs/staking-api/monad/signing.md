@@ -18,7 +18,7 @@ Below are common signing approaches supported by EVM-compatible tooling.
 
 Monad is EVM-compatible, so standard Ethereum tooling can be used for transaction signing.
 
-The crafted transaction payload returned by the API is passed to the signer using libraries such as Web3.js or Ethers.js. The signer produces a valid EVM signature, and the resulting signed transaction can then be broadcast to the Monad network.
+The crafted transaction payload returned by the API is passed to the signer using library Ethers.js. The signer produces a valid EVM signature, and the resulting signed transaction can then be broadcast to the Monad network.
 
 This method is typically used in backend services, scripts, or environments where private keys are managed directly by the application.
 

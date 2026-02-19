@@ -76,11 +76,11 @@ This endpoint will craft a stake transaction ready to be signed.
 
 #### Request body parameters
 
-[`StakewiseStakeActionDto`](/staking-api/api-reference#model/stakewisestakeactiondto)
+<a href="/staking-api/api-reference#model/stakewisestakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
 
 #### Returned
 
-[`StakewiseStakingActionResponseDto`](/staking-api/api-reference#model/stakewisestakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -96,11 +96,11 @@ This endpoint will build an "enter exit queue" unstake transaction ready to be s
 
 #### Request param
 
-[`StakewiseStakeActionDto`](/staking-api/api-reference#model/stakewisestakeactiondto)
+<a href="/staking-api/api-reference#model/stakewisestakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
 
 #### Returned
 
-[`StakewiseStakingActionResponseDto`](/staking-api/api-reference#model/stakewisestakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -115,11 +115,11 @@ Craft a withdraw transaction
 Once the assets in queue are ready to be claimable you can claim them. This action will craft a withdraw transaction of the withdrawable assets.
 
 
-[`StakewiseWithdrawActionDto`](/staking-api/api-reference#model/stakewisewithdrawactiondto)
+<a href="/staking-api/api-reference#model/stakewisewithdrawactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseWithdrawActionDto</code></a>
 
 #### Returned
 
-[`StakewiseStakingActionResponseDto`](/staking-api/api-reference#model/stakewisestakingactionresponsedto)
+<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -135,11 +135,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-[`EthPrepareActionDto`](/staking-api/api-reference#model/ethprepareactiondto)
+<a href="/staking-api/api-reference#model/ethprepareactiondto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionDto</code></a>
 
 #### Returned
 
-[`EthPrepareActionResponseDto`](/staking-api/api-reference#model/ethprepareactionresponsedto)
+<a href="/staking-api/api-reference#model/ethprepareactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionResponseDto</code></a>
 
 ____
 
@@ -155,11 +155,11 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-[`EthBroadcastActionDto`](/staking-api/api-reference#model/ethbroadcastactiondto)
+<a href="/staking-api/api-reference#model/ethbroadcastactiondto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionDto</code></a>
 
 #### Returned
 
-[`EthBroadcastActionResponseDto`](/staking-api/api-reference#model/ethbroadcastactionresponsedto)
+<a href="/staking-api/api-reference#model/ethbroadcastactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionResponseDto</code></a>
 
 ____
 
@@ -168,7 +168,7 @@ ____
 Get stakewise actions history for the given address
 
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/historic/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/historic/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/historic/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/historic/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -180,7 +180,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of [`StakewiseGetActionResponseDto`](/staking-api/api-reference#model/stakewisegetactionresponsedto)
+Array of <a href="/staking-api/api-reference#model/stakewisegetactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetActionResponseDto</code></a>
 
 ____
 
@@ -189,7 +189,7 @@ ____
 Get stakewise stake balance for the given address
 
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stake-balance/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stake-balance/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stake-balance/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stake-balance/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -201,7 +201,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of [`StakewiseGetStakeBalanceResponseDto`](/staking-api/api-reference#model/stakewisegetstakebalanceresponsedto)
+Array of <a href="/staking-api/api-reference#model/stakewisegetstakebalanceresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetStakeBalanceResponseDto</code></a>
 
 ____
 
@@ -211,7 +211,7 @@ ____
 Get stakewise exited balance for the given address
 
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/exited-balance/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/exited-balance/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/exited-balance/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/exited-balance/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -223,7 +223,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of [`StakewiseGetExitedBalanceResponseDto`](/staking-api/api-reference#model/stakewisegetexitedbalanceresponsedto)
+Array of <a href="/staking-api/api-reference#model/stakewisegetexitedbalanceresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetExitedBalanceResponseDto</code></a>
 
 ____
 
@@ -241,7 +241,7 @@ Get vault details, as current APY
 
 #### Returned
 
-Array of [`StakewiseGetVaultResponseDto`](/staking-api/api-reference#model/stakewisegetvaultresponsedto)
+Array of <a href="/staking-api/api-reference#model/stakewisegetvaultresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetVaultResponseDto</code></a>
 
 ____
 
@@ -250,7 +250,7 @@ ____
 
 Get user stats for stakewise vault for N days
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stats/{address}" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stats/{address}</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumstakewise/GET/api/v1/ethereum/stakewise/stats/&#123;address&#125;" target="_blank" rel="noopener noreferrer"><code>/api/v1/ethereum/stakewise/stats/&#123;address&#125;</code></a>
 
 #### Description
 
@@ -258,4 +258,4 @@ Get vault details, as current APY
 
 #### Returned
 
-Array of [`StakewiseGetUserStatsResponseDto`](/staking-api/api-reference#model/stakewisegetuserstatsresponsedto)
+Array of <a href="/staking-api/api-reference#model/stakewisegetuserstatsresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetUserStatsResponseDto</code></a>
