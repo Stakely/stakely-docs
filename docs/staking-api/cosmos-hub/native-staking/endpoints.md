@@ -45,7 +45,7 @@ Need support for another network? Reach out at [admin@stakely.io](mailto:admin@s
 
 If you are unsure which Cosmos networks are enabled for your account you can ask the API directly.
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/GET/api/v1/cosmos/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/networks</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/GET/api/v1/cosmoshub/native/networks" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/networks</code></a>
 Each object in the response includes:
 
 | Field | Description |
@@ -61,7 +61,7 @@ ____
 
 Craft a stake transaction:
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/stake</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/stake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/action/stake</code></a>
 
 #### Description
 
@@ -81,7 +81,7 @@ ____
 
 Craft an unstake transaction:
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/unstake</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/unstake" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/action/unstake</code></a>
 
 #### Description
 
@@ -101,7 +101,7 @@ ____
 
 Craft a claim rewards transaction:
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/claim-rewards" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/claim-rewards</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/claim-rewards" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/action/claim-rewards</code></a>
 
 #### Description
 
@@ -121,7 +121,7 @@ ____
 
 Gathers signature and unsigned tx:
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/prepare</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/action/prepare</code></a>
 
 #### Description
 
@@ -141,7 +141,7 @@ ____
 
 Broadcast a signed transaction
 
- - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmos/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmos/native/action/broadcast</code></a>
+ - Endpoint: <a href="/staking-api/api-reference#tag/cosmoshub/POST/api/v1/cosmoshub/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/cosmoshub/native/action/broadcast</code></a>
 
 #### Description
 
