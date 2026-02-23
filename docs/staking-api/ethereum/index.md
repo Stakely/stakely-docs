@@ -8,7 +8,7 @@ This section covers Ethereum staking integrations using the Stakely Staking API.
 
 ## Useful links
 
-- Stakely, Ethereum (ETH) staking overview: https://stakely.io/staking/ethereum-eth-staking  
+- Stakely, Ethereum (ETH) staking overview: https://stakely.io/staking/ethereum-staking
 - Ethereum staking basics: https://ethereum.org/staking/#what-is-staking
 
 ## What you will find in this section
