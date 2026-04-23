@@ -27,10 +27,10 @@ jobs:
       run: |
         if [ "${{ env.BRANCH_NAME }}" = "develop" ]
         then
-          docker build --build-arg STAKING_API_URL="https://dev-staking-api.stakely.io/docs" --build-arg STAKING_API_DOC_JSON_URL="https://dev-staking-api.stakely.io/docs-json" --build-arg APP_URL="https://dev-app.stakely.io" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+          docker build --build-arg STAKING_API_URL="https://dev-staking-api.stakely.io/docs" --build-arg STAKING_API_DOC_JSON_URL="https://dev-staking-api.stakely.io/docs-json" --build-arg APP_URL="https://dev-app.stakely.io" --build-arg CHATWOOT_WEBSITE_TOKEN="${{ secrets.CHATWOOT_WEBSITE_TOKEN }}" --build-arg CHATWOOT_BASE_URL="${{ secrets.CHATWOOT_BASE_URL }}" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
         elif [ "${{ env.BRANCH_NAME }}" = "main" ]
         then
-          docker build --build-arg STAKING_API_URL="https://staking-api.stakely.io/docs" --build-arg STAKING_API_DOC_JSON_URL="https://staking-api.stakely.io/docs-json" --build-arg APP_URL="https://app.stakely.io" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
+          docker build --build-arg STAKING_API_URL="https://staking-api.stakely.io/docs" --build-arg STAKING_API_DOC_JSON_URL="https://staking-api.stakely.io/docs-json" --build-arg APP_URL="https://app.stakely.io" --build-arg CHATWOOT_WEBSITE_TOKEN="${{ secrets.CHATWOOT_WEBSITE_TOKEN }}" --build-arg CHATWOOT_BASE_URL="${{ secrets.CHATWOOT_BASE_URL }}" -t stakely/stakely-docs:${{ env.BRANCH_NAME }} .
         fi
         echo '${{ secrets.DOCKERHUB_PASSWORD }}' | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
         docker push stakely/stakely-docs:${{ env.BRANCH_NAME }}
@@ -54,7 +54,7 @@ jobs:
       run: |
         cd kubernetes-manifests
         echo "Image Digest: ${{ env.IMAGE_DIGEST }}"
-        # Replaces the image digest with the new one to trigger ArgoCD        
+        # Replaces the image digest with the new one to trigger ArgoCD
         if [ "${{ env.BRANCH_NAME }}" = "main" ]
         then
           yq e '.frontend.docs.image = "${{ env.IMAGE_DIGEST }}"' -i web/values.production.yaml
