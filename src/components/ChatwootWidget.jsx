@@ -24,13 +24,13 @@ function getOrCreateVisitorId() {
 
 export default function ChatwootWidget() {
   const { siteConfig } = useDocusaurusContext();
-  const { chatwootWebsiteToken, chatwootBaseUrl } = siteConfig.customFields ?? {};
+  const { chatwootWebsiteToken, chatwootBaseUrl, chatwootEnabled } = siteConfig.customFields ?? {};
 
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
     }
-    if (!chatwootWebsiteToken || !chatwootBaseUrl) {
+    if (!chatwootEnabled || !chatwootWebsiteToken || !chatwootBaseUrl) {
       return;
     }
 
@@ -58,7 +58,7 @@ export default function ChatwootWidget() {
     return () => {
       cancelled = true;
     };
-  }, [chatwootWebsiteToken, chatwootBaseUrl]);
+  }, [chatwootEnabled, chatwootWebsiteToken, chatwootBaseUrl]);
 
   return null;
 }

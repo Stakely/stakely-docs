@@ -20,6 +20,7 @@ const config = {
     appUrl: process.env.APP_URL,
     chatwootWebsiteToken: process.env.CHATWOOT_WEBSITE_TOKEN,
     chatwootBaseUrl: process.env.CHATWOOT_BASE_URL,
+    chatwootEnabled: process.env.CHATWOOT_ENABLED === 'true',
   },
   title: 'Stakely Docs',
   favicon: 'img/favicon.ico',
