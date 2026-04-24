@@ -76,11 +76,11 @@ This endpoint will craft a stake transaction ready to be signed.
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/stakewisestakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseStakeActionDto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -96,11 +96,11 @@ This endpoint will build an "enter exit queue" unstake transaction ready to be s
 
 #### Request param
 
-<a href="/staking-api/api-reference#model/stakewisestakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseStakeActionDto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -115,11 +115,11 @@ Craft a withdraw transaction
 Once the assets in queue are ready to be claimable you can claim them. This action will craft a withdraw transaction of the withdrawable assets.
 
 
-<a href="/staking-api/api-reference#model/stakewisewithdrawactiondto" target="_blank" rel="noopener noreferrer"><code>StakewiseWithdrawActionDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseWithdrawActionDto" target="_blank" rel="noopener noreferrer"><code>StakewiseWithdrawActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakewisestakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakewiseStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseStakingActionResponseDto</code></a>
 
 ____
 
@@ -135,11 +135,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/ethprepareactiondto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionDto</code></a>
+<a href="/staking-api/api-reference#model/EthPrepareActionDto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/ethprepareactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/EthPrepareActionResponseDto" target="_blank" rel="noopener noreferrer"><code>EthPrepareActionResponseDto</code></a>
 
 ____
 
@@ -155,11 +155,11 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/ethbroadcastactiondto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionDto</code></a>
+<a href="/staking-api/api-reference#model/EthBroadcastActionDto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/ethbroadcastactionresponsedto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/EthBroadcastActionResponseDto" target="_blank" rel="noopener noreferrer"><code>EthBroadcastActionResponseDto</code></a>
 
 ____
 
@@ -180,7 +180,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of <a href="/staking-api/api-reference#model/stakewisegetactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetActionResponseDto</code></a>
+Array of <a href="/staking-api/api-reference#model/StakewiseGetActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetActionResponseDto</code></a>
 
 ____
 
@@ -201,7 +201,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of <a href="/staking-api/api-reference#model/stakewisegetstakebalanceresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetStakeBalanceResponseDto</code></a>
+Array of <a href="/staking-api/api-reference#model/StakewiseGetStakeBalanceResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetStakeBalanceResponseDto</code></a>
 
 ____
 
@@ -223,7 +223,7 @@ At url param you will need to pass the `address` you want to retrieve actions fr
 
 #### Returned
 
-Array of <a href="/staking-api/api-reference#model/stakewisegetexitedbalanceresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetExitedBalanceResponseDto</code></a>
+Array of <a href="/staking-api/api-reference#model/StakewiseGetExitedBalanceResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetExitedBalanceResponseDto</code></a>
 
 ____
 
@@ -241,7 +241,7 @@ Get vault details, as current APY
 
 #### Returned
 
-Array of <a href="/staking-api/api-reference#model/stakewisegetvaultresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetVaultResponseDto</code></a>
+Array of <a href="/staking-api/api-reference#model/StakewiseGetVaultResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetVaultResponseDto</code></a>
 
 ____
 
@@ -258,4 +258,4 @@ Get vault details, as current APY
 
 #### Returned
 
-Array of <a href="/staking-api/api-reference#model/stakewisegetuserstatsresponsedto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetUserStatsResponseDto</code></a>
+Array of <a href="/staking-api/api-reference#model/StakewiseGetUserStatsResponseDto" target="_blank" rel="noopener noreferrer"><code>StakewiseGetUserStatsResponseDto</code></a>

@@ -70,11 +70,11 @@ This endpoint will craft a create nonce account transaction ready to be signed. 
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/createnonceaccountactiondto" target="_blank" rel="noopener noreferrer"><code>CreateNonceAccountActionDto</code></a>
+<a href="/staking-api/api-reference#model/CreateNonceAccountActionDto" target="_blank" rel="noopener noreferrer"><code>CreateNonceAccountActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -93,11 +93,11 @@ The stake action combines these steps into a single transaction, simplifying the
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/solanastakeactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaStakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaStakeActionDto" target="_blank" rel="noopener noreferrer"><code>SolanaStakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -115,11 +115,11 @@ The unstake action through the Staking API initiates this process by creating a 
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/solanaunstakeactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaUnstakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaUnstakeActionDto" target="_blank" rel="noopener noreferrer"><code>SolanaUnstakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -140,11 +140,11 @@ The withdraw action through the Staking API creates a transaction that performs 
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/solanawithdrawactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaWithdrawActionDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaWithdrawActionDto" target="_blank" rel="noopener noreferrer"><code>SolanaWithdrawActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanastakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaStakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaStakingActionResponseDto</code></a>
 
 ____
 
@@ -160,11 +160,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/solanaprepareactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaPrepareActionDto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanaprepareactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaPrepareActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaPrepareActionResponseDto</code></a>
 
 ____
 
@@ -180,8 +180,8 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/solanabroadcastactiondto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaBroadcastActionDto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/solanabroadcastactionresponsedto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/SolanaBroadcastActionResponseDto" target="_blank" rel="noopener noreferrer"><code>SolanaBroadcastActionResponseDto</code></a>

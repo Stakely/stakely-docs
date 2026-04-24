@@ -69,11 +69,11 @@ This endpoint will craft a stake transaction ready to be signed.
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/stakeactiondto" target="_blank" rel="noopener noreferrer"><code>StakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/StakeActionDto" target="_blank" rel="noopener noreferrer"><code>StakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -89,11 +89,11 @@ This endpoint will craft an unstake transaction ready to be signed.
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/unstakeactiondto" target="_blank" rel="noopener noreferrer"><code>UnstakeActionDto</code></a>
+<a href="/staking-api/api-reference#model/UnstakeActionDto" target="_blank" rel="noopener noreferrer"><code>UnstakeActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -109,11 +109,11 @@ This endpoint will craft a claim rewards transaction ready to be signed.
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/claimrewardsactiondto" target="_blank" rel="noopener noreferrer"><code>ClaimRewardsActionDto</code></a>
+<a href="/staking-api/api-reference#model/ClaimRewardsActionDto" target="_blank" rel="noopener noreferrer"><code>ClaimRewardsActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/stakingactionresponsedto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/StakingActionResponseDto" target="_blank" rel="noopener noreferrer"><code>StakingActionResponseDto</code></a>
 
 ____
 
@@ -129,11 +129,11 @@ Prepare a signed transaction by gathering the provided signatures with the unsig
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/prepareactiondto" target="_blank" rel="noopener noreferrer"><code>PrepareActionDto</code></a>
+<a href="/staking-api/api-reference#model/PrepareActionDto" target="_blank" rel="noopener noreferrer"><code>PrepareActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/preparectionresponsedto" target="_blank" rel="noopener noreferrer"><code>PrepareActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/PrepareActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PrepareActionResponseDto</code></a>
 
 ____
 
@@ -149,8 +149,8 @@ Broadcast a signed transaction. Usually you will brodcast the signed transaction
 
 #### Request body parameters
 
-<a href="/staking-api/api-reference#model/brodacastactiondto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionDto</code></a>
+<a href="/staking-api/api-reference#model/BroadcastActionDto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionDto</code></a>
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/broadcastctionresponsedto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/BroadcastActionResponseDto" target="_blank" rel="noopener noreferrer"><code>BroadcastActionResponseDto</code></a>
