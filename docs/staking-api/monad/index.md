@@ -15,6 +15,7 @@ This section covers Monad staking integrations using the Stakely Staking API. It
 
 - **Signing transactions**: how to sign Monad transactions returned by the crafting endpoints, with examples for common signing setups.  
 - **Native staking**: end-to-end flows and endpoints for delegating, claiming rewards, and undelegating for native Monad staking.  
+- **Magma liquid staking**: flows and endpoints for staking MON for gMON, undelegating, and withdrawing via the Magma protocol.
 
 ## Notes
 
