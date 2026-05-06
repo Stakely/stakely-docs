@@ -80,7 +80,7 @@ This endpoint crafts a delegate transaction ready to be signed. The transaction 
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/MonadActionResponseDto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a> (same response shape as Monad crafting endpoints)
+<a href="/staking-api/api-reference#model/PharosActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PharosActionResponseDto</code></a>
 
 ____
 
@@ -100,7 +100,7 @@ This endpoint crafts an undelegate transaction ready to be signed. It exits the 
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/MonadActionResponseDto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/PharosActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PharosActionResponseDto</code></a>
 
 ____
 
@@ -120,7 +120,7 @@ Once principal has passed the unlock period, this action crafts a transaction to
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/MonadActionResponseDto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/PharosActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PharosActionResponseDto</code></a>
 
 ____
 
@@ -140,7 +140,7 @@ This endpoint crafts a claim rewards transaction ready to be signed. It transfer
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/MonadActionResponseDto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/PharosActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PharosActionResponseDto</code></a>
 
 ____
 
@@ -160,15 +160,15 @@ This endpoint crafts a compound rewards transaction ready to be signed. It reinv
 
 #### Returned
 
-<a href="/staking-api/api-reference#model/MonadActionResponseDto" target="_blank" rel="noopener noreferrer"><code>MonadActionResponseDto</code></a>
+<a href="/staking-api/api-reference#model/PharosActionResponseDto" target="_blank" rel="noopener noreferrer"><code>PharosActionResponseDto</code></a>
 
 ____
 
 ### Prepare action
 
-Pharos uses the same EVM **prepare** pipeline as Monad. After signing `raw_tx_hex_hash`, call:
+After signing `raw_tx_hex_hash`, call the Pharos prepare endpoint:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/POST/api/v1/monad/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/action/prepare</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumpharos/POST/api/v1/pharos/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/pharos/native/action/prepare</code></a>
 
 #### Description
 
@@ -188,7 +188,7 @@ ____
 
 Broadcast the signed transaction:
 
-- Endpoint: <a href="/staking-api/api-reference#tag/ethereummonad/POST/api/v1/monad/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/action/broadcast</code></a>
+- Endpoint: <a href="/staking-api/api-reference#tag/ethereumpharos/POST/api/v1/pharos/native/action/broadcast" target="_blank" rel="noopener noreferrer"><code>/api/v1/pharos/native/action/broadcast</code></a>
 
 #### Description
 

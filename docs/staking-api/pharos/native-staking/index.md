@@ -66,14 +66,14 @@ actor User
 participant StakingAPI
 User->>+StakingAPI: POST /api/v1/pharos/native/action/delegate
 Note right of StakingAPI: Craft unsigned tx
-StakingAPI-->>-User: MonadActionResponseDto
+StakingAPI-->>-User: PharosActionResponseDto
 activate User
 rect rgb(255,178,216)
 Note left of User: Sign locally or custodian
 end
 deactivate User
 
-User->>+StakingAPI: POST /api/v1/monad/native/action/prepare
+User->>+StakingAPI: POST /api/v1/pharos/native/action/prepare
 Note right of StakingAPI: Attach signature to tx
 StakingAPI-->>-User: Signed transaction
 activate User
@@ -81,7 +81,7 @@ rect rgba(228, 173, 77, 0.8)
 Note left of User: Broadcast via RPC or API
 end
 deactivate User
-User->>+StakingAPI: POST /api/v1/monad/native/action/broadcast
+User->>+StakingAPI: POST /api/v1/pharos/native/action/broadcast
 Note right of StakingAPI: Broadcast to network
 StakingAPI-->>-User: Transaction status
 activate User

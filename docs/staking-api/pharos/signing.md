@@ -81,7 +81,7 @@ const signUnsignedTxWithPk = async ({serialized_tx_hex, raw_tx_hex_hash}) => {
 
   return { r, s, v};
 }
-// Get serialized_tx_hex and raw_tx_hex_hash from stake action response (see MonadActionResponseDto in API reference)
+// Get serialized_tx_hex and raw_tx_hex_hash from stake action response (see Pharos action response model in API reference)
 
 const signature = await signUnsignedTxWithPk({serialized_tx_hex, raw_tx_hex_hash})
 // With the Signature you need to pass it to the /prepare endpoint
@@ -90,7 +90,7 @@ const signature = await signUnsignedTxWithPk({serialized_tx_hex, raw_tx_hex_hash
 
 1. Get the `serialized_tx_hex` and `raw_tx_hex_hash` from any of the Pharos crafting actions
 2. Pass them to the signer code above
-3. Once you have the signature, call the Monad **prepare** endpoint (shared EVM prepare pipeline): <a href="/staking-api/api-reference#tag/ethereummonad/POST/api/v1/monad/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/action/prepare</code></a>
+3. Once you have the signature, call the **prepare** endpoint in the Pharos flow: <a href="/staking-api/api-reference#tag/ethereumpharos/POST/api/v1/pharos/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/pharos/native/action/prepare</code></a>
 
 
 # Signing using external custodians or MPC wallets
@@ -184,11 +184,11 @@ const signWithFb = async (unsigned_tx_hash_hex) => {
   return { r, s, v};
 }
 
-// Get raw_tx_hex_hash from stake action response (MonadActionResponseDto)
+// Get raw_tx_hex_hash from stake action response (Pharos action response model)
 
 const signature_hex = await signWithFb(raw_tx_hex_hash);
 
-// With the signature, call /api/v1/monad/native/action/prepare
+// With the signature, call /api/v1/pharos/native/action/prepare
 // Check api reference
 
 ```
@@ -197,4 +197,4 @@ const signature_hex = await signWithFb(raw_tx_hex_hash);
 
 1. Get `raw_tx_hex_hash` from any Pharos crafting action response
 2. Pass it to the signer code above
-3. Once you have the signature, call <a href="/staking-api/api-reference#tag/ethereummonad/POST/api/v1/monad/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/monad/native/action/prepare</code></a>
+3. Once you have the signature, call <a href="/staking-api/api-reference#tag/ethereumpharos/POST/api/v1/pharos/native/action/prepare" target="_blank" rel="noopener noreferrer"><code>/api/v1/pharos/native/action/prepare</code></a>
