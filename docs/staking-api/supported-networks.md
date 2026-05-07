@@ -17,6 +17,7 @@ If you are interested in integrating a network that is not supported, please con
 | Cosmos Hub      |       ✅     |           Native      |  Mainnet, Testnet |
 | Celestia        |       ✅     |           Native      |  Mainnet, Testnet |
 | Ethereum        |       ✅     |         StakeWise     |   Mainnet, Hoodi  |
+| Pharos          |       ✅     |           Native      |  Mainnet          |
 | Monad           |       ✅     |           Native      |  Mainnet, Testnet |
 | Solana          |       ✅     |           Native      |  Mainnet, Testnet |
 | Stablecoins     |  Contact Us  |           DeFi       |  Mainnet, Testnet |
