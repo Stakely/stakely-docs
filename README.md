@@ -72,3 +72,4 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ## Problems?
 
 Ask for help on [Stack Overflow](https://stackoverflow.com/questions/tagged/docusaurus), on our [GitHub repository](https://github.com/facebook/docusaurus), our [Discord server](https://discordapp.com/invite/docusaurus), or [Twitter](https://twitter.com/docusaurus).
+
