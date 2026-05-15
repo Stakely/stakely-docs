@@ -44,4 +44,4 @@ FROM prod as serve
 EXPOSE 3000
 ## Run the production server.
 # CMD ["npm", "run", "serve", "--host 0.0.0.0", "--no-open"]
-CMD ["sh", "-c", "STAKING_API_URL=$STAKING_API_URL STAKING_API_DOC_JSON_URL=$STAKING_API_DOC_JSON_URL pnpm run serve -- --host 0.0.0.0 --no-open"]
+CMD ["node_modules/.bin/docusaurus", "serve", "--host", "0.0.0.0", "--no-open"]
