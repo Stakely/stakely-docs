@@ -3,8 +3,8 @@
 # Stage 1: Base image.
 ## Start with a base image containing NodeJS so we can build Docusaurus.
 FROM node:24-slim as base
-## Enable corepack.
-# RUN corepack enable 
+## Enable corepack and activate pnpm.
+RUN corepack enable && corepack prepare pnpm@11.1.2 --activate
 ## Set the working directory to `/opt/docusaurus`.
 WORKDIR /opt/docusaurus
 
@@ -34,9 +34,9 @@ ENV CHATWOOT_BASE_URL=$CHATWOOT_BASE_URL
 ARG CHATWOOT_ENABLED
 ENV CHATWOOT_ENABLED=$CHATWOOT_ENABLED
 
-RUN npm ci
+RUN pnpm install --frozen-lockfile
 ## Build the static site.
-RUN npm run build
+RUN pnpm run build
 
 # Serve with `docusaurus serve`.
 FROM prod as serve
@@ -44,4 +44,4 @@ FROM prod as serve
 EXPOSE 3000
 ## Run the production server.
 # CMD ["npm", "run", "serve", "--host 0.0.0.0", "--no-open"]
-CMD ["sh", "-c", "STAKING_API_URL=$STAKING_API_URL STAKING_API_DOC_JSON_URL=$STAKING_API_DOC_JSON_URL npm run serve -- --host 0.0.0.0 --no-open"]
+CMD ["sh", "-c", "STAKING_API_URL=$STAKING_API_URL STAKING_API_DOC_JSON_URL=$STAKING_API_DOC_JSON_URL pnpm run serve -- --host 0.0.0.0 --no-open"]
