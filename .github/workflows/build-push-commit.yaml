@@ -43,21 +43,37 @@ jobs:
           BRANCH_NAME: ${{ env.BRANCH_NAME }}
         run: |
           set -euo pipefail
+
+          require_var() {
+            local name="$1" value="$2"
+            if [ -z "$value" ]; then
+              echo "ERROR: Required variable '$name' is not set or empty." >&2
+              exit 1
+            fi
+          }
+
           if [ "$BRANCH_NAME" = "main" ]; then
-            STAKING_API_URL="${PRO_STAKING_API_URL:-}"
-            STAKING_API_DOC_JSON_URL="${PRO_STAKING_API_DOC_JSON_URL:-}"
-            APP_URL="${PRO_APP_URL:-}"
-            CHATWOOT_WEBSITE_TOKEN="${PRO_CHATWOOT_WEBSITE_TOKEN:-}"
-            CHATWOOT_BASE_URL="${PRO_CHATWOOT_BASE_URL:-}"
-            CHATWOOT_ENABLED="${PRO_CHATWOOT_ENABLED:-}"
+            STAKING_API_URL="${PRO_STAKING_API_URL}"
+            STAKING_API_DOC_JSON_URL="${PRO_STAKING_API_DOC_JSON_URL}"
+            APP_URL="${PRO_APP_URL}"
+            CHATWOOT_WEBSITE_TOKEN="${PRO_CHATWOOT_WEBSITE_TOKEN}"
+            CHATWOOT_BASE_URL="${PRO_CHATWOOT_BASE_URL}"
+            CHATWOOT_ENABLED="${PRO_CHATWOOT_ENABLED}"
           else
-            STAKING_API_URL="${DEV_STAKING_API_URL:-}"
-            STAKING_API_DOC_JSON_URL="${DEV_STAKING_API_DOC_JSON_URL:-}"
-            APP_URL="${DEV_APP_URL:-}"
-            CHATWOOT_WEBSITE_TOKEN="${DEV_CHATWOOT_WEBSITE_TOKEN:-}"
-            CHATWOOT_BASE_URL="${DEV_CHATWOOT_BASE_URL:-}"
-            CHATWOOT_ENABLED="${DEV_CHATWOOT_ENABLED:-}"
+            STAKING_API_URL="${DEV_STAKING_API_URL}"
+            STAKING_API_DOC_JSON_URL="${DEV_STAKING_API_DOC_JSON_URL}"
+            APP_URL="${DEV_APP_URL}"
+            CHATWOOT_WEBSITE_TOKEN="${DEV_CHATWOOT_WEBSITE_TOKEN}"
+            CHATWOOT_BASE_URL="${DEV_CHATWOOT_BASE_URL}"
+            CHATWOOT_ENABLED="${DEV_CHATWOOT_ENABLED}"
           fi
+
+          require_var "STAKING_API_URL" "$STAKING_API_URL"
+          require_var "STAKING_API_DOC_JSON_URL" "$STAKING_API_DOC_JSON_URL"
+          require_var "APP_URL" "$APP_URL"
+          require_var "CHATWOOT_WEBSITE_TOKEN" "$CHATWOOT_WEBSITE_TOKEN"
+          require_var "CHATWOOT_BASE_URL" "$CHATWOOT_BASE_URL"
+          require_var "CHATWOOT_ENABLED" "$CHATWOOT_ENABLED"
 
           docker build \
             --build-arg STAKING_API_URL="$STAKING_API_URL" \
