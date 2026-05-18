@@ -2,10 +2,8 @@ import React from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import styles from "./HomepageFeatures.module.css";
-import { useColorMode } from '@docusaurus/theme-common';
 
 function Card({ to, header, body, externalIcon = false, productIcon = null }) {
-  const {colorMode} = useColorMode();
   /*
   Both the `header` and `body` expect an object with the following type
   header = {
@@ -13,25 +11,16 @@ function Card({ to, header, body, externalIcon = false, productIcon = null }) {
   }
   */
 
-  const getProductIcon = () => {
-    if (!productIcon) {
-      return null;
-    }
-
-    if (colorMode === "light") {
-      return productIcon.light;
-    }
-
-    if (colorMode === 'dark') {
-      return productIcon.dark;
-    }
-  }
-
   return (
     <div className={clsx("col col--4 ", styles.feature)}>
       <Link className="navbar__link card" to={to}>
         <div className="card__header">
-          {getProductIcon() && <img src={getProductIcon()} height={32} width={32} alt={header.label}/>}
+          {productIcon && (
+            <>
+              <img src={productIcon.light} height={32} width={32} alt={header.label} className={styles.iconLight} />
+              <img src={productIcon.dark} height={32} width={32} alt="" className={styles.iconDark} />
+            </>
+          )}
           <h3>
             {header.label}
             {externalIcon && (

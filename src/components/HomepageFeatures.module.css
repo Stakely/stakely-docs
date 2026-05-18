@@ -41,3 +41,15 @@
 .iconExternalIcon {
   margin-left: 0.5em;
 }
+
+.iconDark {
+  display: none;
+}
+
+[data-theme='dark'] .iconLight {
+  display: none;
+}
+
+[data-theme='dark'] .iconDark {
+  display: inline;
+}

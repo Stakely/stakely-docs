@@ -1,0 +1,7 @@
+minimumReleaseAge: 4320
+resolutionMode: highest
+minimumReleaseAgeIgnoreMissingTime: false
+
+allowBuilds:
+  core-js: false
+  postman-code-generators: false
