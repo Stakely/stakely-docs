@@ -1,0 +1,231 @@
+# Stakely Staking API full context for LLMs
+
+Canonical documentation:
+
+- Introduction: https://docs.stakely.io/staking-api/introduction
+- AI Integration Guide: https://docs.stakely.io/staking-api/ai-integration-guide.md
+- Supported networks: https://docs.stakely.io/staking-api/supported-networks
+- Authentication: https://docs.stakely.io/staking-api/authentication
+- API Reference: https://docs.stakely.io/staking-api/api-reference
+- OpenAPI schema: https://staking-api.stakely.io/openapi.json
+
+The OpenAPI schema is the source of truth for exact endpoints, request schemas, response schemas, field names, enum values, and validation rules.
+
+## What this API is
+
+The Stakely Staking API is a REST API for integrating staking into wallets, exchanges, fintech products, custodians, institutions, and other applications. It abstracts protocol-level differences across supported networks and helps applications craft staking transactions and read staking-related state.
+
+The API is non-custodial by design. Stakely prepares unsigned transaction payloads and operates validator infrastructure, but the integrating application signs transactions with its own signing flow.
+
+## Security model
+
+- Never send private keys, seed phrases, mnemonics, custody credentials, or raw signer secrets to Stakely.
+- Signing happens client-side, server-side in the integrator's controlled environment, or through the integrator's custodian/MPC/hardware signer.
+- The API returns transaction payloads to sign; the integrator returns signatures or signed payload material to prepare and broadcast.
+- Use testnets where available before mainnet.
+- Store API keys in server-side secrets or protected environment variables. Do not expose production API keys in frontend bundles.
+- Verify response signatures if your integration requires additional integrity guarantees. See Authentication docs.
+
+## Authentication and headers
+
+Required request header:
+
+```http
+X-API-KEY: <STAKELY_API_KEY>
+```
+
+Optional network selection header:
+
+```http
+X-NETWORK: <network-or-chain-id>
+```
+
+`X-NETWORK` selects the target network or chain identifier. If omitted, the API may use the default network configured for the API key, depending on the blockchain integration. Use each blockchain's `/networks` endpoint to discover valid values.
+
+Recommended environment variables:
+
+```bash
+STAKELY_API_KEY=
+STAKELY_API_BASE_URL=https://staking-api.stakely.io
+STAKELY_OPENAPI_URL=https://staking-api.stakely.io/openapi.json
+STAKELY_NETWORK=
+```
+
+## General transaction flow
+
+Most write operations follow this pattern:
+
+1. Craft transaction: call a network-specific `action/*` endpoint such as `stake`, `delegate`, `unstake`, `undelegate`, `withdraw`, `claim-rewards`, or `compound`.
+2. Sign client-side: sign the returned unsigned transaction payload with the user's wallet, private-key signer, custodian, MPC wallet, hardware signer, or backend signer controlled by the integrator.
+3. Prepare transaction: call the network-specific `action/prepare` endpoint with the unsigned payload and the required signature format.
+4. Broadcast transaction: call the network-specific `action/broadcast` endpoint, or broadcast through your own node/RPC when supported by the chain flow.
+
+Exact field names differ by blockchain family. Always check the OpenAPI schema before generating code.
+
+## Supported and documented networks
+
+The docs currently cover these Staking API integrations:
+
+- Cosmos Hub native staking: Mainnet and Testnet in the supported networks page.
+- Celestia native staking: Mainnet and Testnet in the supported networks page. Celestia follows the Cosmos-family integration pattern.
+- Ethereum StakeWise: Mainnet and Hoodi.
+- Pharos native staking: Mainnet.
+- Monad native staking: Mainnet and Testnet.
+- Monad Magma liquid staking: documented under Monad.
+- Solana native staking: Mainnet and Testnet.
+- Sui native staking: documented under Sui; discover enabled networks with `/api/v1/sui/native/networks`.
+- Stablecoins DeFi: contact Stakely.
+
+For exact current availability per API key, call the relevant `/networks` endpoint and check the OpenAPI schema.
+
+## Endpoint map by network
+
+Use the API Reference and OpenAPI schema for exact schemas.
+
+### Cosmos Hub native staking
+
+Base path: `/api/v1/cosmoshub/native`
+
+- `GET /networks`
+- `POST /action/stake`
+- `POST /action/unstake`
+- `POST /action/claim-rewards`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+
+### Ethereum StakeWise
+
+Base path: `/api/v1/ethereum/stakewise`
+
+- `GET /networks`
+- `POST /action/stake`
+- `POST /action/unstake`
+- `POST /action/withdraw`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+- `GET /historic/{address}`
+- `GET /stake-balance/{address}`
+- `GET /exited-balance/{address}`
+- `GET /vault`
+- `GET /stats/{address}`
+
+### Monad native staking
+
+Base path: `/api/v1/monad/native`
+
+- `GET /networks`
+- `POST /action/delegate`
+- `POST /action/undelegate`
+- `POST /action/withdraw`
+- `POST /action/claim-rewards`
+- `POST /action/compound`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+- `GET /stake-balance/{address}`
+- `GET /withdrawals/{address}`
+- `GET /withdrawal/{address}/{withdrawId}`
+
+### Monad Magma liquid staking
+
+Base path: `/api/v1/monad/magma`
+
+- `GET /networks`
+- `POST /action/delegate`
+- `POST /action/undelegate`
+- `POST /action/withdraw`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+- `GET /balance/{address}`
+- `GET /withdrawal/{address}`
+
+### Pharos native staking
+
+Base path: `/api/v1/pharos/native`
+
+- `GET /networks`
+- `POST /action/delegate`
+- `POST /action/undelegate`
+- `POST /action/withdraw`
+- `POST /action/claim-rewards`
+- `POST /action/compound-rewards`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+- `GET /stake-balance/{address}`
+
+### Solana native staking
+
+Base path: `/api/v1/solana/native`
+
+- `GET /networks`
+- `POST /action/create-nonce-account`
+- `POST /action/stake`
+- `POST /action/unstake`
+- `POST /action/withdraw`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+
+### Sui native staking
+
+Base path: `/api/v1/sui/native`
+
+- `GET /networks`
+- `POST /action/stake`
+- `POST /action/unstake`
+- `POST /action/prepare`
+- `POST /action/broadcast`
+- `GET /stake-balance/{address}`
+
+## Signing by blockchain family
+
+### EVM-style networks
+
+Applies to Ethereum StakeWise, Monad, Pharos, and other EVM-compatible flows.
+
+- Crafting endpoints return unsigned transaction data.
+- Sign with an EVM signer such as ethers.js, wallet provider, custodian, MPC wallet, or hardware wallet.
+- Prepare endpoints commonly expect EVM signature parts such as `r`, `s`, and `v`, plus the unsigned transaction payload. Check OpenAPI for the exact DTO.
+
+### Cosmos-family networks
+
+Applies to Cosmos Hub and similar Cosmos SDK integrations such as Celestia when enabled through the same family.
+
+- Crafting endpoints return Cosmos transaction payloads.
+- Sign with a Cosmos SDK-compatible signer or custodian.
+- Prepare combines the unsigned transaction with the required Cosmos signature data before broadcast.
+
+### Solana
+
+- Crafting endpoints return a Solana transaction payload, commonly represented as an encoded transaction/hash payload in the docs.
+- Sign with `@solana/web3.js`, a wallet adapter, custodian, MPC wallet, or hardware signer.
+- Prepare combines signatures with the unsigned transaction payload.
+- Broadcast sends the signed Solana transaction.
+
+### Sui
+
+- Crafting endpoints return `unsigned_tx_b64`.
+- Sign with the Mysten Sui SDK, wallet, custodian, MPC wallet, or hardware signer.
+- Prepare expects the unsigned transaction bytes and base64 signatures according to the Sui DTOs.
+- Broadcast returns the Sui transaction digest when successful.
+
+## What an AI should ask before generating code
+
+Before generating integration code, ask for:
+
+- Target blockchain and network, including the `X-NETWORK` value if known.
+- Action: stake/delegate, unstake/undelegate, withdraw, claim rewards, compound, balance query, network discovery, or another supported action.
+- Signing method: browser wallet, private-key signer, backend signer, Fireblocks, MPC, hardware wallet, or custom custodian.
+- Programming language and runtime: Node.js, TypeScript, Python, backend service, frontend app, serverless, etc.
+- Environment: mainnet/testnet, custody model, API key storage, and whether broadcasting should use Stakely or the integrator's own RPC.
+- Whether response signature verification is required.
+
+## Code-generation rules for agents
+
+- Use `https://staking-api.stakely.io/openapi.json` as the source of truth for schemas.
+- Include `X-API-KEY` in every authenticated request.
+- Include `X-NETWORK` when the target network must be explicit.
+- Never place production API keys in frontend code examples.
+- Never ask the user to send private keys to Stakely.
+- Keep signing logic under the user's control.
+- Use chain-specific signing libraries and DTOs.
+- Prefer testnet examples when the user has not specified mainnet.
+- Mention that generated code may need DTO adjustments after checking the OpenAPI schema.

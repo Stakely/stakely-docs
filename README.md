@@ -72,3 +72,17 @@ yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 ## Problems?
 
 Ask for help on [Stack Overflow](https://stackoverflow.com/questions/tagged/docusaurus), on our [GitHub repository](https://github.com/facebook/docusaurus), our [Discord server](https://discordapp.com/invite/docusaurus), or [Twitter](https://twitter.com/docusaurus).
+
+## AI-readable documentation
+
+This Docusaurus site publishes AI-friendly files from `static/` into public URLs. Keep these files under the `staking-api` prefix when they are specific to the Stakely Staking API.
+
+Public AI entry points:
+
+- Global LLM router: `https://docs.stakely.io/llms.txt` (`static/llms.txt`)
+- Staking API full LLM context: `https://docs.stakely.io/staking-api/llms-full.txt` (`static/staking-api/llms-full.txt`)
+- Staking API AI guide, raw Markdown: `https://docs.stakely.io/staking-api/ai-integration-guide.md` (`static/staking-api/ai-integration-guide.md`)
+- Staking API AI guide, docs page: `https://docs.stakely.io/staking-api/ai-integration-guide` (`docs/staking-api/ai-integration-guide.md`)
+- Staking API OpenAPI schema: `https://staking-api.stakely.io/openapi.json`
+
+When updating the visible AI guide, mirror the content into `static/staking-api/ai-integration-guide.md` so LLMs can fetch a stable raw Markdown file.

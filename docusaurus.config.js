@@ -17,6 +17,7 @@ const config = {
   },
   customFields: {
     stakingApiUrl: process.env.STAKING_API_URL,
+    stakingApiOpenApiUrl: process.env.STAKING_API_DOC_JSON_URL || 'https://staking-api.stakely.io/openapi.json',
     appUrl: process.env.APP_URL,
     chatwootWebsiteToken: process.env.CHATWOOT_WEBSITE_TOKEN,
     chatwootBaseUrl: process.env.CHATWOOT_BASE_URL,
@@ -74,7 +75,7 @@ const config = {
           // theme: 'solarized',
           // layout: 'classic',
           spec: {
-            url: process.env.STAKING_API_DOC_JSON_URL
+            url: process.env.STAKING_API_DOC_JSON_URL || 'https://staking-api.stakely.io/openapi.json'
           },
         },
       },
