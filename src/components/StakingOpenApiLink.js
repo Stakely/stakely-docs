@@ -5,11 +5,11 @@ const StakingOpenApiLink = () => {
   const {
     siteConfig: {customFields},
   } = useDocusaurusContext();
-  const stakingApiUrl = customFields.stakingApiUrl;
+  const stakingApiOpenApiUrl = customFields.stakingApiOpenApiUrl;
 
   return (
-    <a href={stakingApiUrl} target="_blank" rel="noopener noreferrer">
-      Staking OpenApi
+    <a href={stakingApiOpenApiUrl} target="_blank" rel="noopener noreferrer">
+      Staking OpenAPI schema
     </a>
   );
 };

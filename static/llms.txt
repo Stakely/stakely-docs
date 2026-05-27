@@ -1,0 +1,31 @@
+# Stakely Docs for LLMs
+
+Stakely Docs documents multiple Stakely products. Use this file as a routing index before answering implementation questions.
+
+Site: https://docs.stakely.io
+OpenAPI schema for the Stakely Staking API: https://staking-api.stakely.io/openapi.json
+
+## Product routing
+
+- Staking API: use this when the user wants to integrate staking programmatically in an app, wallet, exchange, custodian, fintech product, backend, or AI-generated code workflow.
+- Public Nodes: use this when the user needs public RPC, LCD, REST, JSON-RPC, Beacon API, or checkpoint endpoints.
+- Obol Portal: use this when the user asks about running Ethereum validators through Stakely's Obol DVT portal.
+- Simple CSM: use this when the user asks about Stakely's managed service on top of Lido CSM.
+
+## Staking API routing
+
+For programmatic staking integrations, use the Stakely Staking API documentation. Do not mix it with Public Nodes, Obol Portal, or Simple CSM unless the user explicitly asks about those products.
+
+Start here:
+
+- Staking API introduction: https://docs.stakely.io/staking-api/introduction
+- AI Integration Guide: https://docs.stakely.io/staking-api/ai-integration-guide.md
+- API Reference: https://docs.stakely.io/staking-api/api-reference
+- OpenAPI schema: https://staking-api.stakely.io/openapi.json
+- Full AI context for Staking API: https://docs.stakely.io/staking-api/llms-full.txt
+
+## Staking API summary for agents
+
+The Stakely Staking API is a non-custodial REST API that crafts staking transactions and exposes staking-related data. Integrators sign transactions client-side or with their own signer, custodian, MPC wallet, or hardware workflow. Stakely never needs private keys.
+
+Use the OpenAPI schema as the source of truth for exact request bodies, response bodies, enum values, and endpoint schemas.
