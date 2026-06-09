@@ -12,7 +12,6 @@ We support a variety of blockchain networks, offering both standard and load bal
 | Ethereum Checkpointz    |       REST      |       ❌      |     https://mainnet-checkpoint-sync.stakely.io   |
 | Ethereum                |       JSON-RPC  |       ✅      |     https://ethereum-json-rpc.stakely.io   |
 | Ethereum                |       BEACON-API|       ✅      |     https://ethereum-beacon-api.stakely.io   |
-| Aptos                   |       REST      |       ❌      |     https://aptos-vfn.stakely.io
 | Celestia                |       RPC       |       ✅      |     https://celestia-rpc.stakely.io   |
 | Celestia                |       LCD       |       ✅      |     https://celestia-lcd.stakely.io   |
 | Cosmos Hub              |       RPC       |       ✅      |     https://cosmoshub-rpc.stakely.io   |
@@ -31,7 +30,7 @@ We support a variety of blockchain networks, offering both standard and load bal
 | Sui                     |       JSON-RPC  |       ✅      |     https://sui-json-rpc-server-01.stakely.io   |
 | Walrus Aggregator       |       REST      |       ✅      |     https://walrus-aggregator.stakely.io/status   |
 | Story                   |       RPC       |       ✅      |     https://story-rpc.stakely.io   |
-| Story                   |     JSON-PRC    |       ✅      |     https://story-json-rpc.stakely.io   |
+| Story                   |     JSON-RPC    |       ✅      |     https://story-json-rpc.stakely.io   |
 
 ## Testnets
 | Blockchain                      | Endpoint type  | Load Balanced? | URL | 
