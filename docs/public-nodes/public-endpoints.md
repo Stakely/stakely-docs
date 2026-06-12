@@ -27,7 +27,7 @@ We support a variety of blockchain networks, offering both standard and load bal
 | Hyperliquid             |       JSON-RPC  |       ✅      |     https://hyperliquid-json-rpc.stakely.io   |
 | Celo                    |       JSON-RPC  |       ✅      |     https://celo-json-rpc.stakely.io   |
 | Sonic                   |       JSON-RPC  |       ✅      |     https://sonic-json-rpc.stakely.io   |
-| Sui                     |       JSON-RPC  |       ✅      |     https://sui-json-rpc-server-01.stakely.io   |
+| Sui                     |       GRAPHQL    |       ✅      |     https://sui-graphql.stakely.io   |
 | Walrus Aggregator       |       REST      |       ✅      |     https://walrus-aggregator.stakely.io/status   |
 | Story                   |       RPC       |       ✅      |     https://story-rpc.stakely.io   |
 | Story                   |     JSON-RPC    |       ✅      |     https://story-json-rpc.stakely.io   |
