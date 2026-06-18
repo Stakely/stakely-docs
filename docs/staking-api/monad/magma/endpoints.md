@@ -15,7 +15,7 @@ Once you already have access to the Staking API with a validated user and existi
 :::tip
 
 You can check the **Staking API Reference** here:
-- Rendered <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">doc page</a>.
+- <a href="/staking-api/api-reference" target="_blank" rel="noopener noreferrer">Scalar API Docs</a>.
 - <StakingOpenApiLink />
 :::
 
