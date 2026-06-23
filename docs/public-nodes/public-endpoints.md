@@ -18,16 +18,12 @@ We support a variety of blockchain networks, offering both standard and load bal
 | Cosmos Hub              |       LCD       |       ✅      |     https://cosmoshub-lcd.stakely.io   |
 | Osmosis                 |       RPC       |       ✅      |     https://osmosis-rpc.stakely.io   |
 | Osmosis                 |       LCD       |       ✅      |     https://osmosis-lcd.stakely.io   |
-| Secret Network          |       RPC       |       ✅      |     https://secretnetwork-rpc.stakely.io   |
-| Secret Network          |       LCD       |       ✅      |     https://secretnetwork-lcd.stakely.io   |
 | Terra V2                |       RPC       |       ✅      |     https://terra-rpc.stakely.io   |
 | Terra V2                |       LCD       |       ✅      |     https://terra-lcd.stakely.io   |
 | Terra Classic           |       RPC       |       ❌      |     https://terraclassic-rpc-server-01.stakely.io   |
-| Taiko                   |       JSON-RPC  |       ✅      |     https://taiko-json-rpc.stakely.io   |
 | Hyperliquid             |       JSON-RPC  |       ✅      |     https://hyperliquid-json-rpc.stakely.io   |
 | Celo                    |       JSON-RPC  |       ✅      |     https://celo-json-rpc.stakely.io   |
 | Sonic                   |       JSON-RPC  |       ✅      |     https://sonic-json-rpc.stakely.io   |
-| Sui                     |       GRAPHQL    |       ✅      |     https://sui-graphql.stakely.io   |
 | Walrus Aggregator       |       REST      |       ✅      |     https://walrus-aggregator.stakely.io/status   |
 | Story                   |       RPC       |       ✅      |     https://story-rpc.stakely.io   |
 | Story                   |     JSON-RPC    |       ✅      |     https://story-json-rpc.stakely.io   |
